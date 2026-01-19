@@ -1,11 +1,14 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,9 +19,10 @@ const Navbar = () => {
   }, []);
 
   const navLinks = [
-    { href: "#jak-to-funguje", label: "Jak to funguje" },
-    { href: "#balicek", label: "Co obsahuje balíček" },
-    { href: "#faq", label: "FAQ" },
+    { href: "/jak-ridit-v-cine", label: "Jak řídit v Číně", isRoute: true },
+    { href: isHomePage ? "#jak-to-funguje" : "/#jak-to-funguje", label: "Jak to funguje", isRoute: false },
+    { href: isHomePage ? "#balicek" : "/#balicek", label: "Co obsahuje balíček", isRoute: false },
+    { href: isHomePage ? "#faq" : "/#faq", label: "FAQ", isRoute: false },
   ];
 
   return (
@@ -34,29 +38,41 @@ const Navbar = () => {
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#" className="flex items-center gap-2">
+          <Link to="/" className="flex items-center gap-2">
             <span className={`text-xl md:text-2xl font-bold transition-colors ${
               isScrolled ? "text-foreground" : "text-primary-foreground"
             }`}>
               Čína Solo
             </span>
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.href}
-                href={link.href}
-                className={`text-sm font-medium transition-colors hover:text-action ${
-                  isScrolled ? "text-foreground" : "text-primary-foreground/90"
-                }`}
-              >
-                {link.label}
-              </a>
+              link.isRoute ? (
+                <Link
+                  key={link.href}
+                  to={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-action ${
+                    isScrolled ? "text-foreground" : "text-primary-foreground/90"
+                  }`}
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className={`text-sm font-medium transition-colors hover:text-action ${
+                    isScrolled ? "text-foreground" : "text-primary-foreground/90"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              )
             ))}
             <Button variant="nav" size="default" asChild>
-              <a href="#balicek">Objednat za 1500 Kč</a>
+              <a href={isHomePage ? "#balicek" : "/#balicek"}>Objednat za 1500 Kč</a>
             </Button>
           </div>
 
@@ -83,17 +99,28 @@ const Navbar = () => {
           >
             <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.href}
-                  href={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-foreground font-medium py-2 hover:text-action transition-colors"
-                >
-                  {link.label}
-                </a>
+                link.isRoute ? (
+                  <Link
+                    key={link.href}
+                    to={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-foreground font-medium py-2 hover:text-action transition-colors"
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="text-foreground font-medium py-2 hover:text-action transition-colors"
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
               <Button variant="action" size="lg" className="w-full" asChild>
-                <a href="#balicek" onClick={() => setIsMobileMenuOpen(false)}>
+                <a href={isHomePage ? "#balicek" : "/#balicek"} onClick={() => setIsMobileMenuOpen(false)}>
                   Objednat za 1500 Kč
                 </a>
               </Button>
