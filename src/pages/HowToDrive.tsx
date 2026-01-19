@@ -8,9 +8,10 @@ import {
   XCircle, 
   Camera, 
   MapPin, 
-  Plane,
+  Building2,
   ArrowLeft,
-  Car
+  Car,
+  BadgeCheck
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Navbar from "@/components/Navbar";
@@ -35,13 +36,13 @@ const HowToDrive = () => {
               className="inline-flex items-center gap-2 text-primary-foreground/70 hover:text-primary-foreground mb-6 transition-colors"
             >
               <ArrowLeft className="w-4 h-4" />
-              Zpět na hlavní stránku
+              Zpět na úvodní stránku
             </Link>
             <h1 className="text-3xl md:text-5xl font-bold mb-6">
-              Jak legálně řídit v Číně jako turista?
+              Řízení motorových vozidel v Číně
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80">
-              Kompletní průvodce pro české řidiče plánující roadtrip v Číně
+              Komplexní přehled legislativních požadavků pro české státní příslušníky
             </p>
           </motion.div>
         </div>
@@ -57,9 +58,8 @@ const HowToDrive = () => {
                 Důležité upozornění
               </h2>
               <p className="text-warning-foreground/90">
-                Jakýkoli <strong>mezinárodní řidičský průkaz</strong>, který vydávají české úřady, 
-                je v Číně <strong>neplatný</strong>. Čína není signatářem žádné z mezinárodních úmluv 
-                o silničním provozu.
+                Mezinárodní řidičský průkaz vydaný českými úřady <strong>není v Číně platný</strong>. 
+                Čínská lidová republika není signatářem Vídeňské ani Ženevské úmluvy o silničním provozu.
               </p>
             </div>
           </div>
@@ -79,7 +79,7 @@ const HowToDrive = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">
-                Druhy řidičáků pro cizince v Číně
+                Typy řidičských oprávnění pro cizí státní příslušníky
               </h2>
               
               <div className="space-y-8">
@@ -97,47 +97,47 @@ const HowToDrive = () => {
                         Temporary Driving Permit
                       </p>
                       <p className="text-primary/70 text-sm font-medium mt-1">
-                        🇨🇳 临时机动车驾驶许可 (Línshí jīdòngchē jiàshǐ xǔkě)
+                        临时机动车驾驶许可 (Línshí jīdòngchē jiàshǐ xǔkě)
                       </p>
                     </div>
                   </div>
                   
                   <div className="bg-action/5 border border-action/20 rounded-xl p-4 mb-6">
                     <p className="text-action font-semibold text-center">
-                      ✨ Tohle je tvůj "chleba". Jediná možnost pro turisty na krátké návštěvě.
+                      Doporučená varianta pro turisty a krátkodobé návštěvy
                     </p>
                   </div>
 
                   <div className="grid md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Pro koho:</h4>
+                      <h4 className="font-semibold text-foreground mb-3">Oprávněné osoby:</h4>
                       <ul className="space-y-2 text-muted-foreground">
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="w-4 h-4 text-success flex-shrink-0" />
-                          Turisté (vízum L)
+                          Držitelé turistického víza (typ L)
                         </li>
                         <li className="flex items-center gap-2">
                           <CheckCircle2 className="w-4 h-4 text-success flex-shrink-0" />
-                          Obchodní cestující (vízum M)
+                          Držitelé obchodního víza (typ M)
                         </li>
                       </ul>
                     </div>
                     
                     <div>
-                      <h4 className="font-semibold text-foreground mb-3">Platnost:</h4>
+                      <h4 className="font-semibold text-foreground mb-3">Doba platnosti:</h4>
                       <p className="text-muted-foreground">
-                        Max. <strong>90 dní</strong> (nebo do konce platnosti víza, pokud je kratší)
+                        Maximálně <strong>90 dní</strong>, případně do konce platnosti víza
                       </p>
                     </div>
                   </div>
 
                   <div className="mt-6 p-4 bg-success/10 border border-success/20 rounded-xl">
                     <h4 className="font-semibold text-success mb-2 flex items-center gap-2">
-                      <CheckCircle2 className="w-5 h-5" />
-                      Zkoušky: ŽÁDNÉ
+                      <BadgeCheck className="w-5 h-5" />
+                      Bez zkoušek
                     </h4>
                     <p className="text-muted-foreground">
-                      Není třeba dělat testy ani jízdy. To je hlavní výhoda tohoto povolení.
+                      Pro vydání dočasného povolení není vyžadována teoretická ani praktická zkouška.
                     </p>
                   </div>
 
@@ -146,15 +146,15 @@ const HowToDrive = () => {
                     <ul className="space-y-2 text-muted-foreground">
                       <li className="flex items-start gap-2">
                         <XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-1" />
-                        Platí pouze pro malé osobní automobily (C1) nebo automaty (C2)
+                        Oprávnění platí pouze pro osobní automobily kategorie C1 a C2
                       </li>
                       <li className="flex items-start gap-2">
                         <XCircle className="w-4 h-4 text-destructive flex-shrink-0 mt-1" />
-                        S tímto papírem nemůžeš řídit kamion ani autobus
+                        Neopravňuje k řízení nákladních vozidel ani autobusů
                       </li>
                       <li className="flex items-start gap-2">
                         <AlertTriangle className="w-4 h-4 text-warning-foreground flex-shrink-0 mt-1" />
-                        Musíš ho vozit s sebou spolu s pasem a českým řidičákem
+                        Povinnost mít při řízení u sebe pas a originál českého řidičského průkazu
                       </li>
                     </ul>
                   </div>
@@ -168,29 +168,29 @@ const HowToDrive = () => {
                     </div>
                     <div>
                       <h3 className="text-xl font-bold text-foreground mb-1">
-                        2. Trvalý čínský řidičák
+                        2. Trvalé čínské řidičské oprávnění
                       </h3>
                       <p className="text-muted-foreground text-sm">
                         Permanent Chinese License
                       </p>
                       <p className="text-primary/70 text-sm font-medium mt-1">
-                        🇨🇳 机动车驾驶证 (Jīdòngchē jiàshǐzhèng)
+                        机动车驾驶证 (Jīdòngchē jiàshǐzhèng)
                       </p>
                     </div>
                   </div>
 
                   <div className="bg-muted border border-border rounded-xl p-4 mb-6">
                     <p className="text-muted-foreground font-medium text-center">
-                      ⚠️ Tohle pro turisty není relevantní
+                      Určeno výhradně pro osoby s dlouhodobým pobytem
                     </p>
                   </div>
 
                   <div className="space-y-4 text-muted-foreground">
                     <p>
-                      <strong>Pro koho:</strong> Cizinci s dlouhodobým pobytem (Residence Permit) – studenti, pracující expati.
+                      <strong>Oprávněné osoby:</strong> Cizinci s povolením k pobytu (Residence Permit) – studenti, zaměstnanci.
                     </p>
                     <p>
-                      <strong>Zkoušky:</strong> ANO. Musí složit teoretický test.
+                      <strong>Požadavky:</strong> Úspěšné složení teoretické zkoušky z pravidel silničního provozu.
                     </p>
                   </div>
                 </div>
@@ -205,12 +205,12 @@ const HowToDrive = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">
-                Co musí mít turista u sebe?
+                Požadované dokumenty
               </h2>
               
               <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
                 <p className="text-muted-foreground mb-6">
-                  Aby úředník na přepážce povolení vydal, turista musí předložit:
+                  Pro vydání dočasného povolení k řízení je nutné předložit následující dokumenty:
                 </p>
                 
                 <div className="space-y-4">
@@ -219,7 +219,7 @@ const HowToDrive = () => {
                     <div>
                       <h4 className="font-semibold text-foreground">Cestovní pas</h4>
                       <p className="text-muted-foreground text-sm">
-                        S platným vízem nebo vstupním razítkem u bezvízového styku
+                        S platným vízem nebo vstupním razítkem v rámci bezvízového styku
                       </p>
                     </div>
                   </div>
@@ -228,15 +228,18 @@ const HowToDrive = () => {
                     <FileText className="w-6 h-6 text-action flex-shrink-0 mt-1" />
                     <div>
                       <h4 className="font-semibold text-foreground">Originál českého řidičského průkazu</h4>
+                      <p className="text-muted-foreground text-sm">
+                        Platný řidičský průkaz vydaný příslušným českým úřadem
+                      </p>
                     </div>
                   </div>
                   
                   <div className="flex items-start gap-4 p-4 bg-action/10 border border-action/20 rounded-xl">
                     <FileText className="w-6 h-6 text-action flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Úřední překlad řidičáku do čínštiny</h4>
+                      <h4 className="font-semibold text-foreground">Úřední překlad řidičského průkazu</h4>
                       <p className="text-muted-foreground text-sm">
-                        Od certifikované čínské překladatelské agentury – <strong>tohle za tebe zařídíme</strong>
+                        Překlad do čínského jazyka vyhotovený certifikovanou čínskou překladatelskou agenturou — <strong>zajišťujeme v rámci našich služeb</strong>
                       </p>
                     </div>
                   </div>
@@ -244,9 +247,9 @@ const HowToDrive = () => {
                   <div className="flex items-start gap-4 p-4 bg-muted/50 rounded-xl">
                     <Camera className="w-6 h-6 text-action flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">3× Barevná fotografie</h4>
+                      <h4 className="font-semibold text-foreground">Průkazové fotografie</h4>
                       <p className="text-muted-foreground text-sm">
-                        Velikost 1 palec, bílé pozadí
+                        3 kusy, rozměr 1 palec (25 × 35 mm), bílé pozadí
                       </p>
                     </div>
                   </div>
@@ -262,25 +265,25 @@ const HowToDrive = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">
-                Kam jít? Návštěva dopravní policie
+                Místo vyřízení
               </h2>
               
               <div className="bg-card border border-border rounded-2xl p-6 md:p-8 shadow-sm">
                 <p className="text-muted-foreground mb-6">
-                  Turista musí fyzicky navštívit <strong>dopravní policii, oddělení správy vozidel</strong>
+                  Žádost se podává osobně na <strong>Oddělení správy motorových vozidel</strong> (Vehicle Management Office)
                 </p>
                 <p className="text-primary/70 font-medium mb-8">
-                  🇨🇳 Che Guan Suo - 车管所
+                  车管所 (Chē guǎn suǒ)
                 </p>
                 
                 <div className="space-y-6">
                   <div className="flex items-start gap-4 p-4 bg-muted/50 rounded-xl">
-                    <Plane className="w-6 h-6 text-action flex-shrink-0 mt-1" />
+                    <Building2 className="w-6 h-6 text-action flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">V Pekingu/Šanghaji (Na letišti)</h4>
+                      <h4 className="font-semibold text-foreground">Mezinárodní letiště</h4>
                       <p className="text-muted-foreground text-sm">
-                        Na velkých letištích (Beijing Capital, Daxing, Shanghai Pudong) jsou tyto přepážky 
-                        přímo v příletové hale. Celý proces tam trvá cca <strong>1 hodinu</strong>.
+                        Na letištích Beijing Capital, Beijing Daxing a Shanghai Pudong jsou k dispozici 
+                        přepážky přímo v příletové hale. Doba vyřízení je přibližně <strong>60 minut</strong>.
                       </p>
                     </div>
                   </div>
@@ -288,9 +291,9 @@ const HowToDrive = () => {
                   <div className="flex items-start gap-4 p-4 bg-muted/50 rounded-xl">
                     <MapPin className="w-6 h-6 text-action flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Ve městě</h4>
+                      <h4 className="font-semibold text-foreground">Městské pobočky</h4>
                       <p className="text-muted-foreground text-sm">
-                        V každém větším městě je tato stanice.
+                        Oddělení správy vozidel se nachází v každém větším čínském městě.
                       </p>
                     </div>
                   </div>
@@ -306,7 +309,7 @@ const HowToDrive = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-2xl md:text-3xl font-bold text-primary mb-8">
-                Jak probíhá vydání?
+                Průběh vydání povolení
               </h2>
               
               <div className="space-y-4">
@@ -315,9 +318,9 @@ const HowToDrive = () => {
                     1
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Registrace</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Podání žádosti</h4>
                     <p className="text-muted-foreground">
-                      Předložíš pas a překlad řidičáku.
+                      Předložení cestovního pasu a úředního překladu řidičského průkazu.
                     </p>
                   </div>
                 </div>
@@ -327,10 +330,10 @@ const HowToDrive = () => {
                     2
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Žádné testy!</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Ověření bez zkoušek</h4>
                     <p className="text-muted-foreground">
-                      Pro auta (kategorie C1) a motorky se nedělají žádné písemné testy ani jízdy, 
-                      pokud jde o dočasné povolení.
+                      Pro kategorii osobních automobilů (C1) není vyžadována žádná teoretická 
+                      ani praktická zkouška.
                     </p>
                   </div>
                 </div>
@@ -340,9 +343,9 @@ const HowToDrive = () => {
                     3
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Vydání</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Vydání oprávnění</h4>
                     <p className="text-muted-foreground">
-                      Úředník data zkontroluje, vytiskne malou kartičku (povolení) a nalepí tam fotku.
+                      Po kontrole dokumentů úředník vytiskne povolení a připojí průkazovou fotografii.
                     </p>
                   </div>
                 </div>
@@ -352,9 +355,9 @@ const HowToDrive = () => {
                     ✓
                   </div>
                   <div>
-                    <h4 className="font-semibold text-foreground mb-1">Platnost</h4>
+                    <h4 className="font-semibold text-foreground mb-1">Platnost oprávnění</h4>
                     <p className="text-muted-foreground">
-                      Povolení platí po dobu platnosti víza (max 90 dní).
+                      Dočasné povolení je platné po dobu trvání víza, maximálně však 90 dní.
                     </p>
                   </div>
                 </div>
@@ -370,14 +373,15 @@ const HowToDrive = () => {
               className="text-center bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 md:p-12"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-                Potřebuješ úřední překlad?
+                Potřebujete zajistit úřední překlad?
               </h2>
               <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto">
-                Zařídíme ti certifikovaný překlad od čínské agentury a doručíme ho až k tobě domů.
+                Zajistíme vyhotovení certifikovaného překladu prostřednictvím čínské překladatelské 
+                agentury včetně doručení na adresu v České republice.
               </p>
               <Button variant="hero" size="xl" asChild>
                 <Link to="/#pricing">
-                  Objednat překlad za 1500 Kč
+                  Objednat službu — 1 500 Kč
                 </Link>
               </Button>
             </motion.div>
