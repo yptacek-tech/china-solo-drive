@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import HowToDrive from "./pages/HowToDrive";
 import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 import CookieBanner from "./components/CookieBanner";
 import AnalyticsLoader from "./components/AnalyticsLoader";
@@ -22,6 +23,7 @@ const App = () => (
           <Route path="/" element={<Index />} />
           <Route path="/jak-ridit-v-cine" element={<HowToDrive />} />
           <Route path="/obchodni-podminky" element={<Terms />} />
+          <Route path="/ochrana-osobnich-udaju" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

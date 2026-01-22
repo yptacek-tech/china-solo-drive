@@ -19,12 +19,12 @@ const Footer = () => {
             >
               Obchodní podmínky
             </Link>
-            <a
-              href="#"
+            <Link
+              to="/ochrana-osobnich-udaju"
               className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
             >
               Ochrana osobních údajů
-            </a>
+            </Link>
             <a
               href="mailto:info@cinasolo.cz"
               className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
