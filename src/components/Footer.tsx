@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   return (
     <footer className="py-10 md:py-12 bg-primary text-primary-foreground">
@@ -11,12 +13,12 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-6 text-sm">
-            <a
-              href="#"
+            <Link
+              to="/obchodni-podminky"
               className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
             >
               Obchodní podmínky
-            </a>
+            </Link>
             <a
               href="#"
               className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
@@ -24,7 +26,7 @@ const Footer = () => {
               Ochrana osobních údajů
             </a>
             <a
-              href="#"
+              href="mailto:info@cinasolo.cz"
               className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
             >
               Kontakt
