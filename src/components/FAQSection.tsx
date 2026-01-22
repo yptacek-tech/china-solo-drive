@@ -20,7 +20,7 @@ const faqItems = [
   {
     question: "Co když mi zamítnou vydání?",
     answer:
-      "Pokud máte platné vízum a český řidičák, je zamítnutí extrémně vzácné. V takovém případě vracíme peníze za službu v plné výši.",
+      "Pokud máte platné vízum a český řidičák, je zamítnutí extrémně vzácné. Vydání povolení závisí na rozhodnutí čínských úřadů.",
   },
   {
     question: "Platí povolení v celé Číně?",
