@@ -21,7 +21,7 @@ const Navbar = () => {
   const navLinks = [
     { href: "/jak-ridit-v-cine", label: "Jak řídit v Číně", isRoute: true },
     { href: isHomePage ? "#jak-to-funguje" : "/#jak-to-funguje", label: "Jak to funguje", isRoute: false },
-    { href: isHomePage ? "#balicek" : "/#balicek", label: "Co obsahuje balíček", isRoute: false },
+    { href: isHomePage ? "#balicek" : "/#balicek", label: "Co obsahuje služba", isRoute: false },
     { href: isHomePage ? "#faq" : "/#faq", label: "FAQ", isRoute: false },
   ];
 
@@ -72,7 +72,7 @@ const Navbar = () => {
               )
             ))}
             <Button variant="nav" size="default" asChild>
-              <a href={isHomePage ? "#balicek" : "/#balicek"}>Objednat za 1500 Kč</a>
+              <a href={isHomePage ? "#balicek" : "/#balicek"}>Objednat překlad</a>
             </Button>
           </div>
 
@@ -121,7 +121,7 @@ const Navbar = () => {
               ))}
               <Button variant="action" size="lg" className="w-full" asChild>
                 <a href={isHomePage ? "#balicek" : "/#balicek"} onClick={() => setIsMobileMenuOpen(false)}>
-                  Objednat za 1500 Kč
+                  Objednat překlad
                 </a>
               </Button>
             </div>
