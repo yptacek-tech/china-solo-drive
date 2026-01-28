@@ -10,6 +10,7 @@ import Privacy from "./pages/Privacy";
 import NotFound from "./pages/NotFound";
 import CookieBanner from "./components/CookieBanner";
 import AnalyticsLoader from "./components/AnalyticsLoader";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/jak-ridit-v-cine" element={<HowToDrive />} />

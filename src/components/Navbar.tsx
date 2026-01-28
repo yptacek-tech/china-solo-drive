@@ -9,6 +9,7 @@ const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const isHeroPage = isHomePage || location.pathname === "/jak-ridit-v-cine";
 
   useEffect(() => {
     const handleScroll = () => {
@@ -30,7 +31,7 @@ const Navbar = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || !isHeroPage
           ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border"
           : "bg-transparent"
       }`}
@@ -40,7 +41,7 @@ const Navbar = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <span className={`text-xl md:text-2xl font-bold transition-colors ${
-              isScrolled ? "text-foreground" : "text-primary-foreground"
+              isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground"
             }`}>
               Čína Solo
             </span>
@@ -54,7 +55,7 @@ const Navbar = () => {
                   key={link.href}
                   to={link.href}
                   className={`text-sm font-medium transition-colors hover:text-action ${
-                    isScrolled ? "text-foreground" : "text-primary-foreground/90"
+                    isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground/90"
                   }`}
                 >
                   {link.label}
@@ -64,7 +65,7 @@ const Navbar = () => {
                   key={link.href}
                   href={link.href}
                   className={`text-sm font-medium transition-colors hover:text-action ${
-                    isScrolled ? "text-foreground" : "text-primary-foreground/90"
+                    isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground/90"
                   }`}
                 >
                   {link.label}
@@ -80,7 +81,7 @@ const Navbar = () => {
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? "text-foreground" : "text-primary-foreground"
+              isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground"
             }`}
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
