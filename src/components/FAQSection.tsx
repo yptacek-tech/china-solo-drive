@@ -8,29 +8,59 @@ import {
 
 const faqItems = [
   {
-    question: "Musím dělat v Číně autoškolu?",
-    answer:
-      "Ne. Pro dočasné povolení (max 90 dní) stačí náš překlad a návštěva úřadu pro registraci. Žádné zkoušky ani jízdy.",
-  },
-  {
     question: "Jak dlouho trvá doručení?",
     answer:
-      "Obvykle 7-10 pracovních dní od odeslání skenu vašeho řidičského průkazu. Používáme expresní kurýry DHL a SF Express.",
+      "Vyhotovení úředního překladu: 1–2 pracovní dny od odeslání skenů. Expresní doručení do ČR: cca 10 kalendářních dnů (letecky). Doprava v rámci Číny: cca 3 dny. Celkem doporučujeme objednávat alespoň 3 týdny před odletem, abyste měli jistotu, že vše stihne dorazit i v případě zdržení například na celnici.",
   },
   {
-    question: "Co když mi zamítnou vydání?",
+    question: "Stačí mi v Číně mezinárodní řidičský průkaz (IDP)?",
     answer:
-      "Pokud máte platné vízum a český řidičák, je zamítnutí extrémně vzácné. Vydání povolení závisí na rozhodnutí čínských úřadů.",
+      "Bohužel ne. Čínská lidová republika nepodepsala Vídeňskou ani Ženevskou úmluvu o silničním provozu, a proto neuznává mezinárodní řidičské průkazy vydané v ČR (ani jinde v EU). Bez místního ‚Dočasného povolení k řízení' (Temporary Driving Permit) není možné si pronajmout automobil a řízení je nelegální.",
   },
   {
-    question: "Platí povolení v celé Číně?",
+    question: "Je tento postup legální a spolehlivý?",
     answer:
-      "Ano, dočasné povolení k řízení platí na celém území Čínské lidové republiky po dobu 90 dní od vydání.",
+      "Ano. Získáte úředně ověřený překlad od certifikované čínské agentury, který je nezbytným podkladem pro čínskou dopravní policii. Na základě tohoto dokumentu vám po příletu dopravní policie na letišti (nebo na úřadě) vystaví oficiální povolení k řízení.",
   },
   {
-    question: "Co potřebuji k objednávce?",
+    question: "Jak nakládáte se skeny mých dokladů?",
     answer:
-      "Platný český řidičský průkaz, platné čínské vízum (nebo potvrzení o jeho vyřízení) a doručovací adresu v ČR.",
+      "Skeny vašeho řidičáku neposíláte nám, ale přímo prověřené partnerské agentuře v Číně. My jako zprostředkovatel s vašimi citlivými údaji nepřicházíme do styku, pouze zajišťujeme celý proces a platbu.",
+  },
+  {
+    question: "Na jak dlouho povolení platí?",
+    answer:
+      "Dočasné povolení k řízení se zpravidla vydává na dobu platnosti vašeho víza, maximálně však na 90 dnů. Je ideální pro turistické cesty nebo krátkodobé pobyty.",
+  },
+  {
+    question: "Co když mi povolení na místě nevydají?",
+    answer:
+      "I když dodáte perfektní podklady, finální rozhodnutí a vydání dočasného průkazu je vždy v pravomoci konkrétního úředníka čínské dopravní policie. Z naší zkušenosti je při dodržení všech instrukcí (které od nás dostanete v manuálu) úspěšnost velmi vysoká, ale nelze ji 100% garantovat kvůli vyšší moci nebo změně úředních postupů.",
+  },
+  {
+    question: "Kolik stojí vydání samotného průkazu v Číně?",
+    answer:
+      "Poplatek, který zaplatíte přímo na přepážce čínské dopravní policii, je pouze symbolický – zpravidla 10 RMB (cca 30–35 Kč). Tento správní poplatek není součástí naší služby (hradí se na místě přes Alipay/WeChat nebo v hotovosti) a pokrývá tisk samotné kartičky.",
+  },
+  {
+    question: "Musím v Číně podstoupit zdravotní prohlídku?",
+    answer:
+      "Nečekejte žádnou nemocnici. Součástí procesu na úřadě je pouze jednoduchý test zraku (hlavně na barvoslepost) a pořízení fotografie obličeje. Často to probíhá přímo v automatickém kiosku v hale úřadu. Celé to zabere asi 5 minut a nepotřebujete k tomu žádné potvrzení od českého lékaře.",
+  },
+  {
+    question: "Domluvím se na úřadě anglicky?",
+    answer:
+      "Upřímně? Spíše ne. Většina úředníků mluví pouze čínsky, ale na turistických místech už úředníci vědí, co od nich jako cizinec budete chtít, není se tedy potřeba jazykové bariéry obávat. Navíc od nás dostanete základní potřebné fráze napsané v čínštině, ty pak stačí pouze ukázat úředníkovi. Díky tomu proces proběhne hladce i bez znalosti jediného slova čínsky.",
+  },
+  {
+    question: "Co musím mít fyzicky s sebou na úřadě?",
+    answer:
+      "Překlad českého řidičského průkazu do čínštiny od certifikované agentury, váš platný český řidičský průkaz (bez originálů vám úředník průkaz nevydá), váš cestovní pas s platným vízem/vstupním razítkem a 3 pasové fotografie s bílým pozadím (ne starší než 6 měsíců). Poznámka: Nejsou uznávány řidičské průkazy mladistvých ve zkušební periodě, kdy smí řídit pouze pod dohledem mentora.",
+  },
+  {
+    question: "Jak dlouho strávím na úřadě?",
+    answer:
+      "Samotný proces u přepážky trvá obvykle 30 až 60 minut. Průkaz vám vytisknou a zalaminují na počkání.",
   },
 ];
 
