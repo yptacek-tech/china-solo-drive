@@ -21,11 +21,8 @@ const PricingSection = () => {
           className="text-center max-w-2xl mx-auto mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-foreground">
-            Co obsahuje balíček
+            Co obsahuje naše služba?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Vše, co potřebujete pro legální jízdu v Číně
-          </p>
         </motion.div>
 
         <motion.div
@@ -47,19 +44,19 @@ const PricingSection = () => {
             <div className="p-8 md:p-10">
               {/* Header */}
               <h3 className="text-xl font-semibold text-foreground">
-                Startovní balíček Čína Solo
+                Překlad řidičského průkazu
               </h3>
 
               {/* Price */}
               <div className="mt-6 flex items-baseline gap-2">
                 <span className="text-5xl md:text-6xl font-extrabold text-foreground">
-                  1500
+                  999
                 </span>
                 <span className="text-2xl font-semibold text-muted-foreground">
                   Kč
                 </span>
               </div>
-              <p className="mt-2 text-muted-foreground">jednorázově</p>
+              <p className="mt-2 text-muted-foreground">+ doprava</p>
 
               {/* Divider */}
               <div className="my-8 h-px bg-border" />
