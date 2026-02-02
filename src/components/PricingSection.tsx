@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 
 const features = [
   "Certifikovaný překlad uznávaný čínskou policií",
+  "Překlad evropské legislativy specifikující typy držených řidičských oprávnění",
   "Průvodce řízením v Číně (administrativní proces, specifika řízení, jak na půjčení auta)",
   "Podpora při vyhledání správného úřadu v místě Vašeho pobytu a při doručení překladu do hotelu",
 ];
