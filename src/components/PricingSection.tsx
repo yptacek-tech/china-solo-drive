@@ -3,10 +3,9 @@ import { Check, Sparkles } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const features = [
-  "Úřední překlad uznávaný čínskou policií",
-  "Expresní mezinárodní doprava z Číny do ČR",
-  'PDF Průvodce "Jak na čínské úřady" (mapy, fráze)',
-  "Prioritní podpora na e-mailu",
+  "Certifikovaný překlad uznávaný čínskou policií",
+  "Průvodce řízením v Číně (administrativní proces, specifika řízení, jak na půjčení auta)",
+  "Podpora při vyhledání správného úřadu v místě Vašeho pobytu a při doručení překladu do hotelu",
 ];
 
 const PricingSection = () => {
