@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Check, Sparkles } from "lucide-react";
+import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const features = [
@@ -33,13 +33,6 @@ const PricingSection = () => {
           className="max-w-lg mx-auto"
         >
           <div className="relative bg-card rounded-2xl border-2 border-action shadow-xl overflow-hidden">
-            {/* Popular Badge */}
-            <div className="absolute top-0 right-0">
-              <div className="bg-action text-action-foreground text-xs font-bold px-4 py-1.5 rounded-bl-lg flex items-center gap-1">
-                <Sparkles className="w-3.5 h-3.5" />
-                Nejoblíbenější
-              </div>
-            </div>
 
             <div className="p-8 md:p-10">
               {/* Header */}
@@ -85,7 +78,7 @@ const PricingSection = () => {
 
               {/* Trust */}
               <p className="mt-4 text-center text-sm text-muted-foreground">
-                Bezpečná platba kartou • Garance vrácení peněz
+                Bezpečná platba kartou
               </p>
             </div>
           </div>
