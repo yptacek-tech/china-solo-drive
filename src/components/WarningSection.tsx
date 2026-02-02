@@ -17,8 +17,8 @@ const WarningSection = () => {
           </div>
           <p className="text-warning-foreground font-medium text-base md:text-lg">
             <span className="font-bold">Pozor:</span> V Číně vám půjčovny auto
-            bez místního povolení nevydají. Policie neuznává IDP. Neriskujte
-            pokutu a zkaženou dovolenou.
+            bez místního řidičského průkazu nevydají. Policie neuznává
+            mezinárodní řidičské průkazy (IDP).
           </p>
         </motion.div>
       </div>
