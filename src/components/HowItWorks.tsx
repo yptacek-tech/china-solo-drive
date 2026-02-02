@@ -55,7 +55,7 @@ const HowItWorks = () => {
             }}
           />
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12">
+          <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-stretch">
             {steps.map((item, index) => (
               <motion.div
                 key={item.step}
@@ -63,9 +63,9 @@ const HowItWorks = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="relative group"
+                className="relative group h-full"
               >
-                <div className="relative bg-card rounded-xl p-6 md:p-8 border-2 border-border shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:border-action group-hover:shadow-xl group-hover:shadow-action/10">
+                <div className="relative bg-card rounded-xl p-6 md:p-8 border-2 border-border shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:border-action group-hover:shadow-xl group-hover:shadow-action/10 h-full flex flex-col">
                   {/* Step Number Badge with Glow */}
                   <div className="absolute -top-4 left-6 md:left-8">
                     <span 
@@ -87,7 +87,7 @@ const HowItWorks = () => {
                   <h3 className="text-xl font-semibold text-foreground mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed flex-grow">
                     {item.description}
                   </p>
                 </div>
