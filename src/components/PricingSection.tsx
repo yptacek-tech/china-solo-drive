@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import CheckoutButton from "@/components/CheckoutButton";
-
-const STRIPE_PRICE_ID = "price_1SuduMLYxgJrz2wf0TAjswgH";
+import { Button } from "@/components/ui/button";
 
 const features = [
   "Certifikovaný překlad uznávaný čínskou policií",
@@ -69,9 +67,14 @@ const PricingSection = () => {
               </ul>
 
               {/* CTA */}
-              <CheckoutButton priceId={STRIPE_PRICE_ID} className="w-full mt-10">
-                Objednat překlad
-              </CheckoutButton>
+              <Button
+                variant="action"
+                size="xl"
+                className="w-full mt-10"
+                asChild
+              >
+                <a href="https://buy.stripe.com/6oU00k3TQ2lT8oP7Hl5gc00">Koupit a vyrazit</a>
+              </Button>
 
               {/* Trust */}
               <p className="mt-4 text-center text-sm text-muted-foreground">
