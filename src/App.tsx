@@ -8,6 +8,7 @@ import HowToDrive from "./pages/HowToDrive";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
 import Kontakt from "./pages/Kontakt";
+import Success from "./pages/Success";
 import NotFound from "./pages/NotFound";
 import CookieBanner from "./components/CookieBanner";
 import AnalyticsLoader from "./components/AnalyticsLoader";
@@ -28,6 +29,7 @@ const App = () => (
           <Route path="/obchodni-podminky" element={<Terms />} />
           <Route path="/ochrana-osobnich-udaju" element={<Privacy />} />
           <Route path="/kontakt" element={<Kontakt />} />
+          <Route path="/success" element={<Success />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
