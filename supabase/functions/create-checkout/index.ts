@@ -33,7 +33,7 @@ serve(async (req) => {
       }
     }
 
-    // Create checkout session
+    // Create checkout session with shipping options
     const session = await stripe.checkout.sessions.create({
       customer: customerId,
       customer_email: customerId ? undefined : customerEmail,
@@ -50,6 +50,11 @@ serve(async (req) => {
       shipping_address_collection: {
         allowed_countries: ["CZ", "SK", "CN"],
       },
+      shipping_options: [
+        { shipping_rate: "shr_1Sue6eLYxgJrz2wfSbNyLVOX" },
+        { shipping_rate: "shr_1Sue3MLYxgJrz2wfRRoZyvkE" },
+        { shipping_rate: "shr_1Sue0WLYxgJrz2wf1zI54OHB" },
+      ],
     });
 
     return new Response(JSON.stringify({ url: session.url }), {
