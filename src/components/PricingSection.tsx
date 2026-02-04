@@ -1,6 +1,9 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import CheckoutButton from "@/components/CheckoutButton";
+
+// TODO: Replace with your actual Stripe Price ID from Stripe Dashboard
+const STRIPE_PRICE_ID = "price_REPLACE_ME";
 
 const features = [
   "Certifikovaný překlad uznávaný čínskou policií",
@@ -67,14 +70,9 @@ const PricingSection = () => {
               </ul>
 
               {/* CTA */}
-              <Button
-                variant="action"
-                size="xl"
-                className="w-full mt-10"
-                asChild
-              >
-                <a href="#stripe">Koupit a vyrazit</a>
-              </Button>
+              <CheckoutButton priceId={STRIPE_PRICE_ID} className="w-full mt-10">
+                Objednat překlad
+              </CheckoutButton>
 
               {/* Trust */}
               <p className="mt-4 text-center text-sm text-muted-foreground">
