@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import CheckoutButton from "@/components/CheckoutButton";
 
-// TODO: Replace with your actual Stripe Price ID from Stripe Dashboard
-const STRIPE_PRICE_ID = "price_REPLACE_ME";
+const STRIPE_PRICE_ID = "price_1SuduMLYxgJrz2wf0TAjswgH";
 
 const features = [
   "Certifikovaný překlad uznávaný čínskou policií",
