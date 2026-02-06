@@ -40,6 +40,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
+            <img src="/icon.svg" alt="Čína Solo" className="h-8 w-8" />
             <span className={`text-xl md:text-2xl font-bold transition-colors ${
               isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground"
             }`}>
