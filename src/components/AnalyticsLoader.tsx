@@ -8,28 +8,23 @@ const AnalyticsLoader = () => {
 
   useEffect(() => {
     if (!hasConsented) return;
+    if (document.getElementById("ga-script")) return;
 
-    const loadGoogleAnalytics = () => {
-      if (document.getElementById("ga-script")) return;
+    // Initialize dataLayer and gtag BEFORE loading the script (Google's recommended pattern)
+    window.dataLayer = window.dataLayer || [];
+    function gtag(...args: unknown[]) {
+      window.dataLayer.push(args);
+    }
+    gtag("js", new Date());
+    gtag("config", GA_MEASUREMENT_ID);
+    (window as unknown as { gtag: typeof gtag }).gtag = gtag;
 
-      const script = document.createElement("script");
-      script.id = "ga-script";
-      script.async = true;
-      script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
-      document.head.appendChild(script);
-
-      script.onload = () => {
-        window.dataLayer = window.dataLayer || [];
-        function gtag(...args: unknown[]) {
-          window.dataLayer.push(args);
-        }
-        gtag("js", new Date());
-        gtag("config", GA_MEASUREMENT_ID);
-        (window as unknown as { gtag: typeof gtag }).gtag = gtag;
-      };
-    };
-
-    loadGoogleAnalytics();
+    // Load the gtag.js script
+    const script = document.createElement("script");
+    script.id = "ga-script";
+    script.async = true;
+    script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`;
+    document.head.appendChild(script);
   }, [hasConsented]);
 
   return null;
