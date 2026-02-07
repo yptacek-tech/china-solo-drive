@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
@@ -10,13 +10,21 @@ const Navbar = () => {
   const location = useLocation();
   const isHomePage = location.pathname === "/";
   const isHeroPage = isHomePage || location.pathname === "/jak-ridit-v-cine";
+  const rafId = useRef<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20);
+      if (rafId.current) return;
+      rafId.current = requestAnimationFrame(() => {
+        setIsScrolled(window.scrollY > 20);
+        rafId.current = 0;
+      });
     };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      if (rafId.current) cancelAnimationFrame(rafId.current);
+    };
   }, []);
 
   const navLinks = [
@@ -24,13 +32,16 @@ const Navbar = () => {
     { href: isHomePage ? "#jak-to-funguje" : "/#jak-to-funguje", label: "Jak to funguje", isRoute: false },
     { href: isHomePage ? "#balicek" : "/#balicek", label: "Co obsahuje služba", isRoute: false },
     { href: isHomePage ? "#faq" : "/#faq", label: "FAQ", isRoute: false },
+    { href: "/blog", label: "Blog", isRoute: true },
   ];
 
   return (
     <motion.nav
       initial={{ y: -100 }}
       animate={{ y: 0 }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      transition={{ type: "tween", duration: 0.3 }}
+      style={{ willChange: "transform" }}
+      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
         isScrolled || !isHeroPage
           ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border"
           : "bg-transparent"
@@ -81,6 +92,8 @@ const Navbar = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label={isMobileMenuOpen ? "Zavřít menu" : "Otevřít menu"}
+            aria-expanded={isMobileMenuOpen}
             className={`md:hidden p-2 rounded-lg transition-colors ${
               isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground"
             }`}

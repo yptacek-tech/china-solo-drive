@@ -24,7 +24,8 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, type: "tween" }}
+            style={{ willChange: "opacity, transform" }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight text-balance">
               Řiďte v Číně na vlastní pěst.{" "}
@@ -35,7 +36,8 @@ const Hero = () => {
           <motion.p
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15 }}
+            transition={{ duration: 0.6, delay: 0.15, type: "tween" }}
+            style={{ willChange: "opacity, transform" }}
             className="mt-6 text-lg md:text-xl text-primary-foreground/85 max-w-2xl"
           >
             Mezinárodní řidičák v Číně neplatí. Zajistíme vám oficiální překlad
@@ -45,7 +47,8 @@ const Hero = () => {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            transition={{ duration: 0.6, delay: 0.3, type: "tween" }}
+            style={{ willChange: "opacity, transform" }}
             className="mt-10 flex flex-col sm:flex-row gap-4"
           >
             <Button variant="hero" size="xl" asChild>
