@@ -21,7 +21,7 @@ const steps = [
     step: "3",
     title: "Expresní doručení",
     description:
-      'Oficiální dokument s "mokrým razítkem" vám přistane ve schránce a Vy jste připraveni vyrazit na cestu. (Překlad můžeme zaslat kamkoli, včetně Vašeho hotelu v Číně).',
+      'Doručíme do ČR nebo na vybranou adresu v Číně (třeba do Vašeho hotelu). Doručení po Číně trvá cca 5 dnů, do ČR expresně do 12 dnů.',
   },
 ];
 

@@ -13,6 +13,11 @@ const faqItems = [
       "Vyhotovení úředního překladu: 1–2 pracovní dny od odeslání skenů. Expresní doručení do ČR: cca 10 kalendářních dnů (letecky). Doprava v rámci Číny: cca 3 dny. Celkem doporučujeme objednávat alespoň 3 týdny před odletem, abyste měli jistotu, že vše stihne dorazit i v případě zdržení například na celnici.",
   },
   {
+    question: "Jaké jsou možnosti doručení?",
+    answer:
+      "Nabízíme tři možnosti: 1) Doručení po Číně (cca 5 dnů) – zdarma, s možností doručení přímo do vašeho hotelu. 2) Standardní doručení do ČR (cca 20 dnů) – 1 099 Kč. 3) Expresní doručení do ČR (cca 12 dnů) – 1 549 Kč. Všechny uvedené ceny jsou skutečné náklady dopravce bez jakékoliv přirážky – na doručení nic nevyděláváme.",
+  },
+  {
     question: "Stačí mi v Číně mezinárodní řidičský průkaz (IDP)?",
     answer:
       "Bohužel ne. Čínská lidová republika nepodepsala Vídeňskou ani Ženevskou úmluvu o silničním provozu, a proto neuznává mezinárodní řidičské průkazy vydané v ČR (ani jinde v EU). Bez místního ‚Dočasného povolení k řízení' (Temporary Driving Permit) není možné si pronajmout automobil a řízení je nelegální.",
@@ -45,7 +50,7 @@ const faqItems = [
   {
     question: "Musím v Číně podstoupit zdravotní prohlídku?",
     answer:
-      "Nečekejte žádnou nemocnici. Součástí procesu na úřadě je pouze jednoduchý test zraku (hlavně na barvoslepost) a pořízení fotografie obličeje. Často to probíhá přímo v automatickém kiosku v hale úřadu. Celé to zabere asi 5 minut a nepotřebujete k tomu žádné potvrzení od českého lékaře.",
+      "Ne, na získání dočasného řidičského oprávnění v Číně není potřeba žádná zdravotní prohlídka.",
   },
   {
     question: "Domluvím se na úřadě anglicky?",

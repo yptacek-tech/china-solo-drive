@@ -73,7 +73,7 @@ const PricingSection = () => {
                 className="w-full mt-10"
                 asChild
               >
-                <a href="https://buy.stripe.com/6oU00k3TQ2lT8oP7Hl5gc00">Koupit a vyrazit</a>
+                <a href="https://buy.stripe.com/14A7sMgGCe4B9sTd1F5gc02">Koupit a vyrazit</a>
               </Button>
 
               {/* Trust */}
