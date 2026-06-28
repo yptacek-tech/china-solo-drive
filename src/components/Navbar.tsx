@@ -85,7 +85,7 @@ const Navbar = () => {
               )
             ))}
             <Button variant="nav" size="default" asChild>
-              <a href={isHomePage ? "#balicek" : "/#balicek"}>Objednat překlad</a>
+              <a href="https://buy.stripe.com/7sY00k2PMf8F34v3r55gc03">Objednat překlad</a>
             </Button>
           </div>
 
@@ -135,7 +135,7 @@ const Navbar = () => {
                 )
               ))}
               <Button variant="action" size="lg" className="w-full" asChild>
-                <a href={isHomePage ? "#balicek" : "/#balicek"} onClick={() => setIsMobileMenuOpen(false)}>
+                <a href="https://buy.stripe.com/7sY00k2PMf8F34v3r55gc03" onClick={() => setIsMobileMenuOpen(false)}>
                   Objednat překlad
                 </a>
               </Button>
