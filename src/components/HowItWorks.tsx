@@ -21,7 +21,7 @@ const steps = [
     step: "3",
     title: "Expresní doručení",
     description:
-      'Doručíme do ČR nebo na vybranou adresu v Číně (třeba do Vašeho hotelu). Doručení po Číně trvá cca 5 dnů, do ČR expresně do 12 dnů.',
+      'Doručíme do ČR nebo na vybranou adresu v Číně (třeba do Vašeho hotelu). Doručení po Číně trvá do 6 dnů, do ČR expresně do 10 dnů.',
   },
 ];
 

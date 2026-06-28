@@ -10,12 +10,12 @@ const faqItems = [
   {
     question: "Jak dlouho trvá doručení?",
     answer:
-      "Vyhotovení úředního překladu: 1–2 pracovní dny od odeslání skenů. Expresní doručení do ČR: cca 10 kalendářních dnů (letecky). Doprava v rámci Číny: cca 3 dny. Celkem doporučujeme objednávat alespoň 3 týdny před odletem, abyste měli jistotu, že vše stihne dorazit i v případě zdržení například na celnici.",
+      "Vyhotovení úředního překladu: 1–2 pracovní dny od odeslání skenů. Expresní doručení do ČR: do 10 kalendářních dnů (letecky). Doprava v rámci Číny: do 6 dnů. Tyto časy již zahrnují i dobu potřebnou pro samotný překlad. Celkem doporučujeme objednávat alespoň 3 týdny před odletem, abyste měli jistotu, že vše stihne dorazit i v případě zdržení například na celnici.",
   },
   {
     question: "Jaké jsou možnosti doručení?",
     answer:
-      "Nabízíme tři možnosti: 1) Doručení po Číně (cca 5 dnů) – zdarma, s možností doručení přímo do vašeho hotelu. 2) Standardní doručení do ČR (cca 20 dnů) – 1 099 Kč. 3) Expresní doručení do ČR (cca 12 dnů) – 1 549 Kč. Všechny uvedené ceny jsou skutečné náklady dopravce bez jakékoliv přirážky – na doručení nic nevyděláváme.",
+      "Nabízíme tři možnosti: 1) Doručení po Číně (do 6 dnů) – zdarma, s možností doručení přímo do vašeho hotelu. 2) Standardní doručení do ČR (do 18 dnů) – 1 190 Kč. 3) Expresní doručení do ČR (do 10 dnů) – 1 780 Kč. Všechny uvedené ceny jsou skutečné náklady dopravce bez jakékoliv přirážky – na doručení nic nevyděláváme.",
   },
   {
     question: "Stačí mi v Číně mezinárodní řidičský průkaz (IDP)?",

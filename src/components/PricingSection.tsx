@@ -43,7 +43,7 @@ const PricingSection = () => {
               {/* Price */}
               <div className="mt-6 flex items-baseline gap-2">
                 <span className="text-5xl md:text-6xl font-extrabold text-foreground">
-                  999
+                  1 399
                 </span>
                 <span className="text-2xl font-semibold text-muted-foreground">
                   Kč

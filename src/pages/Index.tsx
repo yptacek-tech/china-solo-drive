@@ -30,7 +30,7 @@ const faqSchema = {
       name: "Jak dlouho trvá doručení?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "Vyhotovení úředního překladu: 1–2 pracovní dny od odeslání skenů. Expresní doručení do ČR: cca 10 kalendářních dnů (letecky). Doprava v rámci Číny: cca 3 dny. Celkem doporučujeme objednávat alespoň 3 týdny před odletem.",
+        text: "Vyhotovení úředního překladu: 1–2 pracovní dny od odeslání skenů. Expresní doručení do ČR: do 10 kalendářních dnů (letecky). Doprava v rámci Číny: do 6 dnů. Celkem doporučujeme objednávat alespoň 3 týdny před odletem.",
       },
     },
     {

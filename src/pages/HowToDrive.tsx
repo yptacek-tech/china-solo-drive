@@ -381,7 +381,7 @@ const HowToDrive = () => {
               </p>
               <Button variant="hero" size="xl" asChild>
                 <a href="https://buy.stripe.com/14A7sMgGCe4B9sTd1F5gc02">
-                  Objednat službu — 999 Kč
+                  Objednat službu — 1 399 Kč
                 </a>
               </Button>
             </motion.div>
