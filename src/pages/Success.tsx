@@ -8,37 +8,16 @@ import Footer from "@/components/Footer";
 
 const Success = () => {
   useEffect(() => {
-    // Track conversion regardless of cookie consent
-    // Ensure gtag script is loaded
-    if (!window.gtag) {
-      // Initialize gtag if not already loaded
-      window.dataLayer = window.dataLayer || [];
-      function gtag(...args: unknown[]) {
-        window.dataLayer.push(args);
-      }
-      (window as unknown as { gtag: typeof gtag }).gtag = gtag;
-      
-      // Load the gtag.js script if not already loaded
-      if (!document.getElementById("ga-script")) {
-        const script = document.createElement("script");
-        script.id = "ga-script";
-        script.async = true;
-        script.src = "https://www.googletagmanager.com/gtag/js?id=G-G0TRYRJ6J5";
-        document.head.appendChild(script);
-      }
+    // Fire Google Ads conversion event
+    // This does not require cookie consent
+    if (window.gtag) {
+      window.gtag('event', 'conversion', {
+        'send_to': 'AW-18281639357/R1y_CMu3isccEL3bro1E',
+        'value': 1.0,
+        'currency': 'EUR',
+        'transaction_id': ''
+      });
     }
-
-    // Fire conversion event
-    setTimeout(() => {
-      if (window.gtag) {
-        window.gtag('event', 'conversion', {
-          'send_to': 'AW-18281639357/R1y_CMu3isccEL3bro1E',
-          'value': 1.0,
-          'currency': 'EUR',
-          'transaction_id': ''
-        });
-      }
-    }, 500); // Small delay to ensure gtag is ready
   }, []);
 
   return (
