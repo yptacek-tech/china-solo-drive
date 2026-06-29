@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowLeft, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -6,6 +7,40 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Success = () => {
+  useEffect(() => {
+    // Track conversion regardless of cookie consent
+    // Ensure gtag script is loaded
+    if (!window.gtag) {
+      // Initialize gtag if not already loaded
+      window.dataLayer = window.dataLayer || [];
+      function gtag(...args: unknown[]) {
+        window.dataLayer.push(args);
+      }
+      (window as unknown as { gtag: typeof gtag }).gtag = gtag;
+      
+      // Load the gtag.js script if not already loaded
+      if (!document.getElementById("ga-script")) {
+        const script = document.createElement("script");
+        script.id = "ga-script";
+        script.async = true;
+        script.src = "https://www.googletagmanager.com/gtag/js?id=G-G0TRYRJ6J5";
+        document.head.appendChild(script);
+      }
+    }
+
+    // Fire conversion event
+    setTimeout(() => {
+      if (window.gtag) {
+        window.gtag('event', 'conversion', {
+          'send_to': 'AW-18281639357/R1y_CMu3isccEL3bro1E',
+          'value': 1.0,
+          'currency': 'EUR',
+          'transaction_id': ''
+        });
+      }
+    }, 500); // Small delay to ensure gtag is ready
+  }, []);
+
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
@@ -16,7 +51,7 @@ const Success = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5 }}
-            className="text-center"
+            className="text-center mt-12"
           >
             {/* Success Icon */}
             <div className="mb-8">
@@ -31,13 +66,12 @@ const Success = () => {
             </div>
 
             {/* Headline */}
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Děkujeme za objednávku!
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
+              Děkujeme za Vaši objednávku.
             </h1>
             
-            <p className="text-lg text-muted-foreground mb-8">
-              Vaše platba byla úspěšně zpracována. Na váš e-mail jsme zaslali potvrzení objednávky 
-              s dalšími instrukcemi.
+            <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
+              Budeme Vás brzy kontaktovat ohledně zaslání skenu Vašeho řidičského průkazu.
             </p>
 
             {/* Next Steps Card */}
@@ -54,10 +88,6 @@ const Success = () => {
                 <li className="flex items-start gap-3">
                   <span className="flex items-center justify-center w-6 h-6 rounded-full bg-action/20 text-action text-sm font-bold shrink-0">2</span>
                   <span>Odešlete sken řidičáku na uvedenou adresu.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex items-center justify-center w-6 h-6 rounded-full bg-action/20 text-action text-sm font-bold shrink-0">3</span>
-                  <span>Do 1–2 dnů obdržíte překlad připravený k tisku nebo odeslání.</span>
                 </li>
               </ol>
             </div>
@@ -77,5 +107,13 @@ const Success = () => {
     </div>
   );
 };
+
+// Type declaration for window
+declare global {
+  interface Window {
+    dataLayer: unknown[];
+    gtag?: (...args: unknown[]) => void;
+  }
+}
 
 export default Success;

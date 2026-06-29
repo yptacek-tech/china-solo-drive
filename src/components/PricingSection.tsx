@@ -20,7 +20,7 @@ const PricingSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
             Co obsahuje naše služba?
           </h2>
         </motion.div>
@@ -34,34 +34,34 @@ const PricingSection = () => {
         >
           <div className="relative bg-card rounded-2xl border-2 border-action shadow-xl overflow-hidden">
 
-            <div className="p-8 md:p-10">
+            <div className="p-5 sm:p-6 md:p-8">
               {/* Header */}
-              <h3 className="text-xl font-semibold text-foreground">
+              <h3 className="text-base sm:text-lg font-semibold text-foreground">
                 Překlad řidičského průkazu
               </h3>
 
               {/* Price */}
               <div className="mt-6 flex items-baseline gap-2">
-                <span className="text-5xl md:text-6xl font-extrabold text-foreground">
+                <span className="text-2xl sm:text-3xl md:text-5xl font-extrabold text-foreground">
                   1 399
                 </span>
-                <span className="text-2xl font-semibold text-muted-foreground">
+                <span className="text-lg sm:text-xl font-semibold text-muted-foreground">
                   Kč
                 </span>
               </div>
-              <p className="mt-2 text-muted-foreground">+ doprava</p>
+              <p className="mt-2 text-sm sm:text-base text-muted-foreground">+ doprava</p>
 
               {/* Divider */}
-              <div className="my-8 h-px bg-border" />
+              <div className="my-6 sm:my-8 h-px bg-border" />
 
               {/* Features */}
-              <ul className="space-y-4">
+              <ul className="space-y-3 sm:space-y-4">
                 {features.map((feature, index) => (
                   <li key={index} className="flex items-start gap-3">
                     <div className="flex items-center justify-center w-5 h-5 rounded-full bg-success/20 shrink-0 mt-0.5">
                       <Check className="w-3.5 h-3.5 text-success" />
                     </div>
-                    <span className="text-foreground">{feature}</span>
+                    <span className="text-sm sm:text-base text-foreground">{feature}</span>
                   </li>
                 ))}
               </ul>
@@ -73,7 +73,7 @@ const PricingSection = () => {
                 className="w-full mt-10"
                 asChild
               >
-                <a href="https://buy.stripe.com/14A7sMgGCe4B9sTd1F5gc02">Koupit a vyrazit</a>
+                <a href="https://buy.stripe.com/7sY00k2PMf8F34v3r55gc03">Koupit a vyrazit</a>
               </Button>
 
               {/* Trust */}

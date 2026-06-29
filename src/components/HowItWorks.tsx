@@ -36,10 +36,10 @@ const HowItWorks = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-16"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
             Jak to funguje?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base sm:text-lg text-muted-foreground">
             Bezpečně a jednoduše. Ve třech krocích.
           </p>
         </motion.div>
@@ -55,7 +55,7 @@ const HowItWorks = () => {
             }}
           />
 
-          <div className="grid md:grid-cols-3 gap-8 md:gap-12 items-stretch">
+          <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-12 items-stretch">
             {steps.map((item, index) => (
               <motion.div
                 key={item.step}
@@ -65,7 +65,7 @@ const HowItWorks = () => {
                 transition={{ duration: 0.5, delay: index * 0.15 }}
                 className="relative group h-full"
               >
-                <div className="relative bg-card rounded-xl p-6 md:p-8 border-2 border-border shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:border-action group-hover:shadow-xl group-hover:shadow-action/10 h-full flex flex-col">
+                <div className="relative bg-card rounded-xl p-4 sm:p-5 md:p-8 border-2 border-border shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:border-action group-hover:shadow-xl group-hover:shadow-action/10 h-full flex flex-col">
                   {/* Step Number Badge with Glow */}
                   <div className="absolute -top-4 left-6 md:left-8">
                     <span 
@@ -79,15 +79,15 @@ const HowItWorks = () => {
                   </div>
 
                   {/* Icon */}
-                  <div className="mt-4 mb-5 flex items-center justify-center w-14 h-14 rounded-lg bg-secondary transition-all duration-300 group-hover:bg-action/10">
-                    <item.icon className="w-7 h-7 text-primary transition-colors duration-300 group-hover:text-action" />
+                  <div className="mt-4 mb-5 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-secondary transition-all duration-300 group-hover:bg-action/10">
+                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary transition-colors duration-300 group-hover:text-action" />
                   </div>
 
                   {/* Content */}
-                  <h3 className="text-xl font-semibold text-foreground mb-3">
+                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">
                     {item.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed flex-grow">
+                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed flex-grow">
                     {item.description}
                   </p>
                 </div>

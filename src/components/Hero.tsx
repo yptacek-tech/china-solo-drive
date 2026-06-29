@@ -19,7 +19,7 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="container relative z-10 pt-24 pb-16 md:pt-32 md:pb-24">
+      <div className="container relative z-10 pt-20 pb-12 md:pt-32 md:pb-24">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
@@ -27,7 +27,7 @@ const Hero = () => {
             transition={{ duration: 0.6, type: "tween" }}
             style={{ willChange: "opacity, transform" }}
           >
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight text-balance">
+            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight text-balance">
               Řiďte v Číně na vlastní pěst.{" "}
               <span className="text-action">Legálně a bez stresu.</span>
             </h1>
@@ -38,7 +38,7 @@ const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.15, type: "tween" }}
             style={{ willChange: "opacity, transform" }}
-            className="mt-6 text-lg md:text-xl text-primary-foreground/85 max-w-2xl"
+            className="mt-6 text-sm sm:text-base md:text-lg text-primary-foreground/85 max-w-2xl"
           >
             Mezinárodní řidičák v Číně neplatí. Zajistíme vám oficiální překlad
             a doručíme ho až k vám domů do ČR.

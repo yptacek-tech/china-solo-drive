@@ -80,10 +80,10 @@ const FAQSection = () => {
           transition={{ duration: 0.5 }}
           className="text-center max-w-2xl mx-auto mb-12"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
             Často kladené dotazy
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
+          <p className="mt-4 text-base sm:text-lg text-muted-foreground">
             Odpovědi na nejčastější otázky našich zákazníků
           </p>
         </motion.div>
@@ -100,12 +100,12 @@ const FAQSection = () => {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-card rounded-lg border border-border px-6 data-[state=open]:shadow-md transition-shadow"
+                className="bg-card rounded-lg border border-border px-4 sm:px-6 data-[state=open]:shadow-md transition-shadow"
               >
-                <AccordionTrigger className="text-left text-foreground font-semibold hover:no-underline py-5">
+                <AccordionTrigger className="text-left text-sm sm:text-base text-foreground font-semibold hover:no-underline py-3 sm:py-4">
                   {item.question}
                 </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground pb-5 leading-relaxed">
+                <AccordionContent className="text-xs sm:text-sm text-muted-foreground pb-4 sm:pb-5 leading-relaxed">
                   {item.answer}
                 </AccordionContent>
               </AccordionItem>

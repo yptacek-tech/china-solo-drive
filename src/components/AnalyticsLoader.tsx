@@ -8,6 +8,8 @@ const AnalyticsLoader = () => {
 
   useEffect(() => {
     if (!hasConsented) return;
+    
+    // Prevent duplicate scripts
     if (document.getElementById("ga-script")) return;
 
     // Initialize dataLayer and gtag BEFORE loading the script (Google's recommended pattern)
@@ -34,6 +36,7 @@ const AnalyticsLoader = () => {
 declare global {
   interface Window {
     dataLayer: unknown[];
+    gtag?: (...args: unknown[]) => void;
   }
 }
 

@@ -41,20 +41,14 @@ const Navbar = () => {
       animate={{ y: 0 }}
       transition={{ type: "tween", duration: 0.3 }}
       style={{ willChange: "transform" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-colors duration-300 ${
-        isScrolled || !isHeroPage
-          ? "bg-card/95 backdrop-blur-md shadow-lg border-b border-border"
-          : "bg-transparent"
-      }`}
+      className="fixed top-0 left-0 right-0 z-50 transition-colors duration-300 bg-card/95 backdrop-blur-md shadow-lg border-b border-border"
     >
       <div className="container mx-auto px-4 sm:px-6">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-2">
             <img src="/icon.svg" alt="Čína Solo" className="h-8 w-8" />
-            <span className={`text-xl md:text-2xl font-bold transition-colors ${
-              isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground"
-            }`}>
+            <span className="text-lg sm:text-xl md:text-2xl font-bold transition-colors text-foreground">
               Čína Solo
             </span>
           </Link>
@@ -66,9 +60,7 @@ const Navbar = () => {
                 <Link
                   key={link.href}
                   to={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-action ${
-                    isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground/90"
-                  }`}
+                  className="text-sm font-medium transition-colors hover:text-action text-foreground"
                 >
                   {link.label}
                 </Link>
@@ -76,9 +68,7 @@ const Navbar = () => {
                 <a
                   key={link.href}
                   href={link.href}
-                  className={`text-sm font-medium transition-colors hover:text-action ${
-                    isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground/90"
-                  }`}
+                  className="text-sm font-medium transition-colors hover:text-action text-foreground"
                 >
                   {link.label}
                 </a>
@@ -94,9 +84,7 @@ const Navbar = () => {
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             aria-label={isMobileMenuOpen ? "Zavřít menu" : "Otevřít menu"}
             aria-expanded={isMobileMenuOpen}
-            className={`md:hidden p-2 rounded-lg transition-colors ${
-              isScrolled || !isHeroPage ? "text-foreground" : "text-primary-foreground"
-            }`}
+            className="md:hidden p-2 rounded-lg transition-colors text-foreground"
           >
             {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>

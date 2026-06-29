@@ -380,7 +380,7 @@ const HowToDrive = () => {
                 agentury včetně doručení na adresu v České republice.
               </p>
               <Button variant="hero" size="xl" asChild>
-                <a href="https://buy.stripe.com/14A7sMgGCe4B9sTd1F5gc02">
+                <a href="https://buy.stripe.com/7sY00k2PMf8F34v3r55gc03">
                   Objednat službu — 1 399 Kč
                 </a>
               </Button>
