@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { STRIPE_CHECKOUT_URL } from "@/lib/stripe";
 
 const features = [
   "Certifikovaný překlad uznávaný čínskou policií",
@@ -73,7 +74,7 @@ const PricingSection = () => {
                 className="w-full mt-10"
                 asChild
               >
-                <a href="https://buy.stripe.com/7sY00k2PMf8F34v3r55gc03">Koupit a vyrazit</a>
+                <a href={STRIPE_CHECKOUT_URL}>Koupit a vyrazit</a>
               </Button>
 
               {/* Trust */}

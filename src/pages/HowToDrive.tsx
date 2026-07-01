@@ -14,6 +14,7 @@ import {
   BadgeCheck
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { STRIPE_CHECKOUT_URL } from "@/lib/stripe";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -380,7 +381,7 @@ const HowToDrive = () => {
                 agentury včetně doručení na adresu v České republice.
               </p>
               <Button variant="hero" size="xl" asChild>
-                <a href="https://buy.stripe.com/7sY00k2PMf8F34v3r55gc03">
+                <a href={STRIPE_CHECKOUT_URL}>
                   Objednat službu — 1 399 Kč
                 </a>
               </Button>
