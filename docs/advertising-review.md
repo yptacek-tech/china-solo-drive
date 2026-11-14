@@ -17,7 +17,7 @@ Status: draft for factual review. These changes clarify the advertised service; 
 3. Confirm who the customer contracts with, who receives the Stripe payment, who invoices the customer, and how the intermediary's fee and agency charge are handled. Existing terms describe the customer paying Čína Solo, which pays the partner. The draft therefore does not assert a direct customer-agency sale.
 4. Check the real Stripe product title, description, price, delivery options, merchant identity, receipt, and post-payment instructions against this wording. External Stripe configuration is not changed by this pull request.
 5. Verify that the actual service excludes filing permit applications or representing customers before authorities, as described in the draft.
-6. Run the production build and browser checks before merging. This environment could not obtain project dependencies. Source and content checks alone do not establish a passing build.
+6. Review the Netlify deploy preview and check browser layouts before merging. Netlify successfully built application commit ca7747a83c629439d9640f2ed06b2433affa9809. This environment could not obtain dependencies for a local build.
 7. Review existing consumer terms and privacy disclosures separately; this wording update is not a legal certification of those documents.
 
 ## Google Ads path
@@ -40,4 +40,5 @@ Keep the agency's real identity, pricing, merchant identity, ads, landing page, 
 - Shared FAQ/service data evaluated successfully; required intermediary and permit distinctions checked.
 - All relative and alias imports in changed source files checked for local targets.
 - Delivery totals checked against the displayed base and delivery prices.
-- Full application build and browser layout remain unverified because project dependencies were unavailable.
+- Netlify reported a successful build and deploy preview for application commit ca7747a83c629439d9640f2ed06b2433affa9809: https://deploy-preview-3--cinasolo.netlify.app
+- Browser visual inspection remains unverified because access to the available browser timed out. No application UI interactions were performed.
