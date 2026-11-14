@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
+import { useState } from "react";
 import { Check } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { STRIPE_CHECKOUT_URL } from "@/lib/stripe";
+import { DELIVERY_CHECKOUTS, type DeliveryRegion } from "@/lib/stripe";
 import { SERVICE_PRICE_CZK } from "@/lib/service";
 import { Link } from "react-router-dom";
 
@@ -13,6 +14,8 @@ const features = [
 ];
 
 const PricingSection = () => {
+  const [deliveryRegion, setDeliveryRegion] = useState<DeliveryRegion>("CZ");
+  const checkout = DELIVERY_CHECKOUTS[deliveryRegion];
   return (
     <section id="balicek" className="py-20 md:py-28 bg-secondary/50">
       <div className="container">
@@ -53,7 +56,7 @@ const PricingSection = () => {
                 </span>
               </div>
               <p className="mt-2 text-sm sm:text-base text-muted-foreground">
-                Jedna platba za know-how, koordinaci a překlad agenturou. Dopravu zvolíte při platbě.
+                Jedna platba za know-how, koordinaci a překlad agenturou. Zvolte zemi doručení; konkrétní způsob dopravy potvrdíte při platbě.
               </p>
 
               {/* Divider */}
@@ -100,6 +103,29 @@ const PricingSection = () => {
                 <Link to="/ochrana-osobnich-udaju" className="underline">informace o osobních údajích</Link>.
               </p>
 
+              <fieldset className="mt-8">
+                <legend className="font-semibold text-foreground mb-3">Kam má překlad dorazit?</legend>
+                <div className="grid gap-3">
+                  <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-4">
+                    <input type="radio" name="delivery-region" value="CZ" checked={deliveryRegion === "CZ"}
+                      onChange={() => setDeliveryRegion("CZ")} className="mt-1" />
+                    <span className="text-sm"><strong>Doručení do ČR</strong>
+                      <span className="block mt-1 text-muted-foreground">Standardní nebo expresní doprava na českou adresu.</span></span>
+                  </label>
+                  <label className="flex cursor-pointer items-start gap-3 rounded-lg border border-border p-4">
+                    <input type="radio" name="delivery-region" value="CN" checked={deliveryRegion === "CN"}
+                      onChange={() => setDeliveryRegion("CN")} className="mt-1" />
+                    <span className="text-sm"><strong>Doručení v Číně</strong>
+                      <span className="block mt-1 text-muted-foreground">Doprava zdarma na čínskou adresu, například do hotelu.</span></span>
+                  </label>
+                </div>
+              </fieldset>
+              <p className="mt-4 text-sm font-semibold text-foreground" aria-live="polite">
+                {deliveryRegion === "CZ" ? "Celkem od " : "Celkem "}
+                {checkout.minimumTotalCzk.toLocaleString("cs-CZ")} Kč
+                {deliveryRegion === "CZ" ? " včetně standardní dopravy." : " včetně dopravy po Číně."}
+              </p>
+
               {/* CTA */}
               <Button
                 variant="action"
@@ -107,7 +133,7 @@ const PricingSection = () => {
                 className="w-full mt-10"
                 asChild
               >
-                <a href={STRIPE_CHECKOUT_URL}>Objednat balíček</a>
+                <a href={checkout.url}>Objednat balíček</a>
               </Button>
 
               {/* Trust */}
