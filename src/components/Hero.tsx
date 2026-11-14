@@ -1,90 +1,46 @@
-import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BookOpen, FileText, Mail, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-road.jpg";
 
-const Hero = () => {
-  return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src={heroImage}
-          alt="Horská silnice v Číně"
-          className="w-full h-full object-cover"
-        />
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/95 via-primary/80 to-primary/60" />
-        <div className="absolute inset-0 bg-gradient-to-t from-primary/90 via-transparent to-primary/30" />
-      </div>
-
-      {/* Content */}
-      <div className="container relative z-10 pt-20 pb-12 md:pt-32 md:pb-24">
-        <div className="max-w-3xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, type: "tween" }}
-            style={{ willChange: "opacity, transform" }}
-          >
-            <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight text-balance">
-              Připravte se na řízení{" "}
-              <span className="text-action">v Číně.</span>
-            </h1>
-          </motion.div>
-
-          <motion.p
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.15, type: "tween" }}
-            style={{ willChange: "opacity, transform" }}
-            className="mt-6 text-sm sm:text-base md:text-lg text-primary-foreground/85 max-w-2xl"
-          >
-            Dostanete praktického průvodce a pomoc s objednávkou překladu.
-            Vy zaplatíte jednou, my uhradíme překlad čínské agentuře
-            a domluvíme jeho doručení. Skeny dokladů posíláte přímo agentuře.
-          </motion.p>
-          <p className="mt-4 max-w-2xl text-sm text-primary-foreground/85 leading-relaxed">
-            Čína Solo poskytuje know-how a koordinaci. Překlad vyhotovuje agentura;
-            žádost o řidičské oprávnění si vyřídíte u čínského úřadu.
-            Samotný překlad k řízení neopravňuje.
-          </p>
-
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3, type: "tween" }}
-            style={{ willChange: "opacity, transform" }}
-            className="mt-10 flex flex-col sm:flex-row gap-4"
-          >
-            <Button variant="hero" size="xl" asChild>
-              <a href="#balicek" className="group">
-                Zobrazit balíček a cenu
-                <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </Button>
-          </motion.div>
-
+const Hero = () => (
+  <section className="bg-[#faf8f4] pt-28 pb-12 sm:pt-32 sm:pb-16 lg:pt-40 lg:pb-20">
+    <div className="container grid items-center gap-10 lg:grid-cols-[1.08fr_1fr] lg:gap-16">
+      <div>
+        <p className="mb-5 text-xs font-bold uppercase tracking-[0.18em] text-orange-800">Pro vaši první cestu autem po Číně</p>
+        <h1 className="max-w-2xl text-4xl font-extrabold leading-[1.1] tracking-tight text-slate-900 sm:text-5xl xl:text-6xl">
+          Chcete si v Číně<br className="hidden sm:block" /> půjčit auto?<br />
+          <span className="text-orange-700">Začněte s přípravou.</span>
+        </h1>
+        <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600 sm:text-lg">
+          Mezinárodní řidičák v pevninské Číně nestačí. Pomůžeme vám zorientovat se v postupu
+          a zkoordinujeme překlad vašeho průkazu u čínské agentury.
+          O dočasné oprávnění pak požádáte osobně na místním úřadě.
+        </p>
+        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
+          <Button size="xl" asChild className="bg-orange-700 text-white hover:bg-orange-800">
+            <a href="#jak-zacit">Jak to celé funguje<ArrowRight size={18} /></a>
+          </Button>
+          <Button variant="outline" size="xl" asChild className="border-slate-300 bg-transparent">
+            <a href="#balicek">Balíček a celková cena</a>
+          </Button>
+        </div>
+        <p className="mt-5 text-sm leading-relaxed text-slate-600">Balíček <strong className="text-slate-900">1 399 Kč</strong> · s doručením do ČR od <strong className="text-slate-900">2 589 Kč</strong></p>
+        <div className="mt-8 flex flex-wrap gap-x-5 gap-y-3 border-t border-slate-200 pt-5 text-xs font-medium text-slate-600">
+          <span className="flex items-center gap-2"><BookOpen size={16} className="text-orange-800" />Průvodce v češtině</span>
+          <span className="flex items-center gap-2"><FileText size={16} className="text-orange-800" />Doklady přímo agentuře</span>
+          <a href="mailto:info@cinasolo.cz" className="flex items-center gap-2 underline-offset-4 hover:underline"><Mail size={16} className="text-orange-800" />Kontakt před nákupem</a>
         </div>
       </div>
-
-      {/* Scroll Indicator */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 1, duration: 0.5 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10"
-      >
-        <motion.div
-          animate={{ y: [0, 8, 0] }}
-          transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
-          className="w-6 h-10 rounded-full border-2 border-primary-foreground/40 flex items-start justify-center p-2"
-        >
-          <div className="w-1 h-2 bg-primary-foreground/60 rounded-full" />
-        </motion.div>
-      </motion.div>
-    </section>
-  );
-};
-
+      <div className="relative overflow-hidden rounded-[1.5rem] bg-slate-900 shadow-xl">
+        <img src={heroImage} alt="Klikatá horská silnice v čínské krajině" className="h-[340px] w-full object-cover sm:h-[420px] lg:h-[540px]" fetchPriority="high" />
+        <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/10 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 p-6 sm:p-8 text-white">
+          <p className="mb-3 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-orange-200"><MapPin size={15} />Vaše cesta začíná před odletem</p>
+          <p className="max-w-sm text-2xl font-bold leading-snug sm:text-3xl">Méně tápání v dokladech.<br />Více prostoru na cestu.</p>
+          <p className="mt-3 max-w-sm text-sm leading-relaxed text-slate-200">Přehledný postup, překlad od agentury a koordinace doručení. V jedné objednávce.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+);
 export default Hero;
