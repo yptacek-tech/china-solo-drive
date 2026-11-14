@@ -30,9 +30,9 @@ const Navbar = () => {
   const navLinks = [
     { href: "/jak-ridit-v-cine", label: "Jak řídit v Číně", isRoute: true },
     { href: isHomePage ? "#jak-to-funguje" : "/#jak-to-funguje", label: "Jak to funguje", isRoute: false },
-    { href: isHomePage ? "#balicek" : "/#balicek", label: "Co obsahuje služba", isRoute: false },
+    { href: isHomePage ? "#balicek" : "/#balicek", label: "Balíček a cena", isRoute: false },
     { href: isHomePage ? "#faq" : "/#faq", label: "FAQ", isRoute: false },
-    { href: "/blog", label: "Blog", isRoute: true },
+    { href: isHomePage ? "#kdo-za-sluzbou-stoji" : "/#kdo-za-sluzbou-stoji", label: "Kdo jsme", isRoute: false },
   ];
 
   return (
@@ -54,7 +54,7 @@ const Navbar = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
               link.isRoute ? (
                 <Link
@@ -74,7 +74,7 @@ const Navbar = () => {
                 </a>
               )
             ))}
-            <Button variant="nav" size="default" asChild>
+            <Button size="default" className="bg-orange-700 text-white hover:bg-orange-800" asChild>
               <a href={isHomePage ? "#balicek" : "/#balicek"}>Zobrazit balíček</a>
             </Button>
           </div>
@@ -122,7 +122,7 @@ const Navbar = () => {
                   </a>
                 )
               ))}
-              <Button variant="action" size="lg" className="w-full" asChild>
+              <Button size="lg" className="w-full bg-orange-700 text-white hover:bg-orange-800" asChild>
                 <a href={isHomePage ? "#balicek" : "/#balicek"} onClick={() => setIsMobileMenuOpen(false)}>
                   Zobrazit balíček
                 </a>

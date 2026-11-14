@@ -1,28 +1,28 @@
 import { Link } from "react-router-dom";
+import { ArrowUpRight, Mail, FileCheck2, ShieldCheck } from "lucide-react";
 
 const SupportSection = () => (
-  <section className="py-14 md:py-20 bg-background" aria-labelledby="support-title">
-    <div className="container max-w-4xl">
-      <h2 id="support-title" className="text-2xl md:text-3xl font-bold text-center">Víte, kdo řeší kterou část</h2>
-      <div className="mt-8 grid gap-4 md:grid-cols-3">
-        {[
-          { title: "Čína Solo", text: "Průvodce, komunikace o objednávce, přijetí platby, úhrada agentury a koordinace dopravy. Provozovatelem je Jan Ptáček, IČO 24398489." },
-          { title: "Čínská agentura", text: "Přebírá podklady přímo od vás a vyhotovuje překlad. Skeny pasu a průkazu nepřeposíláte přes Čína Solo." },
-          { title: "Vy a příslušný úřad", text: "Vy podáte vlastní žádost. Úřad posoudí podklady a rozhodne o oprávnění. Překlad ani balíček nejsou povolením k řízení." },
-        ].map(item => (
-          <div key={item.title} className="rounded-xl border border-border bg-card p-5">
-            <h3 className="font-semibold mb-3">{item.title}</h3>
-            <p className="text-sm text-muted-foreground leading-relaxed">{item.text}</p>
-          </div>
-        ))}
+  <section id="kdo-za-sluzbou-stoji" className="scroll-mt-24 bg-slate-900 py-14 text-white md:py-20" aria-labelledby="support-title">
+    <div className="container grid gap-9 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+      <div>
+        <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-300">Víte, s kým jednáte</p>
+        <h2 id="support-title" className="mt-3 text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Za Čína Solo stojí<br />Jan Ptáček.</h2>
+        <p className="mt-5 text-base leading-relaxed text-slate-300">Provozovatel služby a váš kontakt pro objednávku. Přijímám platbu za balíček,
+          hradím práci agentury a koordinuji komunikaci i doručení.</p>
+        <div className="mt-6 flex items-center gap-4">
+          <span className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full border border-white/20 bg-white/5 text-lg font-bold text-orange-200" aria-hidden="true">JP</span>
+          <div><p className="font-semibold">Jan Ptáček · Čína Solo</p><p className="mt-1 text-sm text-slate-300">IČO 24398489</p></div>
+        </div>
+        <a href="mailto:info@cinasolo.cz" className="mt-5 inline-flex min-h-11 items-center gap-2 rounded-lg text-base font-semibold text-orange-200 underline underline-offset-4"><Mail size={18} />info@cinasolo.cz<ArrowUpRight size={16} /></a>
+        <p className="mt-1 text-sm leading-relaxed text-slate-300">Napište i před nákupem. Stačí termín cesty a město; skeny dokladů neposílejte.</p>
       </div>
-      <div className="mt-6 rounded-xl border border-border p-5 text-sm text-muted-foreground leading-relaxed">
-        <h3 className="font-semibold text-foreground mb-2">Dotaz před nákupem nebo problém s objednávkou?</h3>
-        <p>Napište na <a className="underline" href="mailto:info@cinasolo.cz">info@cinasolo.cz</a>.
-          Podrobnosti o agentuře si můžete vyžádat předem. K dotazům nepřikládejte doklady.
-          U chyby překladu koordinujeme opravu, u nedoručení prověření zásilky.{" "}
-          <Link className="underline" to="/obchodni-podminky">Pravidla nápravy a odstoupení</Link>.
-        </p>
+      <div className="space-y-0 divide-y divide-white/15 rounded-2xl border border-white/15 bg-white/5 px-6">
+        <div className="py-6"><h3 className="flex items-center gap-2 font-semibold"><FileCheck2 size={19} className="text-orange-300" />Kdo vyhotoví překlad?</h3>
+          <p className="mt-3 text-sm leading-relaxed text-slate-300">Partnerská agentura v Číně. Její kontakt dostanete před odesláním podkladů; podrobnosti o agentuře si vyžádejte i před objednávkou. Skeny jí posíláte přímo.</p></div>
+        <div className="py-6"><h3 className="flex items-center gap-2 font-semibold"><ShieldCheck size={19} className="text-orange-300" />Co když se objednávka zkomplikuje?</h3>
+          <p className="mt-3 text-sm leading-relaxed text-slate-300">Ozvěte se s číslem objednávky. U chyby překladu koordinuji opravu s agenturou, u nedoručení prověření zásilky. Vaše zákonná práva tím nejsou dotčena.</p>
+          <Link to="/obchodni-podminky" className="mt-3 inline-block text-sm text-orange-200 underline underline-offset-4">Pravidla nápravy a odstoupení</Link></div>
+        <div className="py-5 text-xs leading-relaxed text-slate-300">Čína Solo poskytuje průvodce a koordinaci; nevydává řidičská oprávnění. O žádosti rozhoduje příslušný čínský úřad.</div>
       </div>
     </div>
   </section>

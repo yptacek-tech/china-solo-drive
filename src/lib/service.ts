@@ -5,6 +5,10 @@ export const SERVICE_DESCRIPTION =
 
 export const faqItems = [
   {
+    question: "Jedu do Číny poprvé. Stačí mi český nebo mezinárodní řidičák?",
+    answer: "Pro řízení v pevninské Číně český ani mezinárodní řidičský průkaz sám o sobě nestačí. Pro krátkou cestu se obvykle žádá o dočasné čínské řidičské oprávnění. Překlad vašeho platného průkazu je podklad k této žádosti, nikoli náhrada oprávnění. Přesné požadavky si ověřte u úřadu, kde budete žádat, a u vybrané půjčovny. Podrobný bezplatný postup najdete na stránce Jak řídit v Číně.",
+  },
+  {
     question: "Za co u Čína Solo platím?",
     answer:
       "Za balíček praktického know-how a koordinace překladu. Dostanete průvodce řízením v Číně a instrukce k dalším krokům. My vyřídíme komunikaci o objednávce, z přijaté částky uhradíme překlad partnerské agentuře v Číně a domluvíme dopravu. Náklady na překlad jsou v ceně balíčku; doprava závisí na zvolené variantě. Neplatíte za vydání řidičského průkazu.",

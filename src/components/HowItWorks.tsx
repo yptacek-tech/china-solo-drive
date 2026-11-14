@@ -1,103 +1,30 @@
-import { motion } from "framer-motion";
-import { CreditCard, Mail, Plane } from "lucide-react";
+import { Mail, FileText, Truck, ArrowRight } from "lucide-react";
 
 const steps = [
-  {
-    icon: CreditCard,
-    step: "1",
-    title: "Jedna objednávka a platba",
-    description:
-      "Vyberete doručení a zaplatíte balíček. Zahrnuje průvodce, koordinaci a náklady na překlad. Platbu agentuře a domluvu objednávky vyřídíme za vás.",
-  },
-  {
-    icon: Mail,
-    step: "2",
-    title: "Agentura vyhotoví překlad",
-    description:
-      "Dostanete kontakt a instrukce. Skeny potřebných dokladů pošlete přímo agentuře, která překlad vyhotoví. Čína Solo jejich kopie nevyžaduje; řešíme stav objednávky.",
-  },
-  {
-    icon: Plane,
-    step: "3",
-    title: "Překlad vám dorazí",
-    description:
-      "Koordinujeme doručení na vybranou adresu. S průvodcem se připravíte na osobní návštěvu úřadu, kde podáte vlastní žádost. O vydání oprávnění rozhoduje úřad.",
-  },
+  { icon: Mail, title: "Vyberete balíček a doručení", text: "Zaplatíte jednu částku přes Stripe. Čína Solo z ní uhradí překlad agentuře a vyřídí komunikaci o objednávce." },
+  { icon: FileText, title: "Doklady pošlete přímo agentuře", text: "Dostanete kontakt a instrukce. Čínská agentura převezme podklady a vyhotoví překlad. Skeny neposíláte přes Čína Solo." },
+  { icon: Truck, title: "Překlad dorazí a máte plán", text: "Koordinujeme doručení do ČR nebo v Číně. S praktickým průvodcem se připravíte na další kroky a osobní návštěvu úřadu." },
 ];
-
-const HowItWorks = () => {
-  return (
-    <section id="jak-to-funguje" className="py-20 md:py-28 bg-background">
-      <div className="container">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
-          className="text-center max-w-2xl mx-auto mb-16"
-        >
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-foreground">
-            Jak to funguje?
-          </h2>
-          <p className="mt-4 text-base sm:text-lg text-muted-foreground">
-            My řešíme komunikaci a platbu, agentura překládá, vy máte své doklady pod kontrolou.
-          </p>
-        </motion.div>
-
-        {/* Steps Container with Gradient Line */}
-        <div className="relative">
-          {/* Gradient Connector Line - Desktop */}
-          <div 
-            className="hidden md:block absolute top-14 left-[16.67%] right-[16.67%] h-1 rounded-full"
-            style={{
-              background: "linear-gradient(90deg, hsl(var(--action)) 0%, hsl(25, 95%, 53%) 50%, hsl(0, 84%, 60%) 100%)",
-              boxShadow: "0 0 20px hsla(var(--action), 0.4), 0 0 40px hsla(var(--action), 0.2)"
-            }}
-          />
-
-          <div className="grid md:grid-cols-3 gap-4 sm:gap-6 md:gap-12 items-stretch">
-            {steps.map((item, index) => (
-              <motion.div
-                key={item.step}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ duration: 0.5, delay: index * 0.15 }}
-                className="relative group h-full"
-              >
-                <div className="relative bg-card rounded-xl p-4 sm:p-5 md:p-8 border-2 border-border shadow-sm transition-all duration-300 group-hover:-translate-y-2 group-hover:border-action group-hover:shadow-xl group-hover:shadow-action/10 h-full flex flex-col">
-                  {/* Step Number Badge with Glow */}
-                  <div className="absolute -top-4 left-6 md:left-8">
-                    <span 
-                      className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-action text-action-foreground text-sm font-bold transition-all duration-300 group-hover:scale-110"
-                      style={{
-                        boxShadow: "0 0 15px hsla(var(--action), 0.5), 0 0 30px hsla(var(--action), 0.3), 0 0 45px hsla(var(--action), 0.1)"
-                      }}
-                    >
-                      {item.step}
-                    </span>
-                  </div>
-
-                  {/* Icon */}
-                  <div className="mt-4 mb-5 flex items-center justify-center w-10 h-10 sm:w-12 sm:h-12 rounded-lg bg-secondary transition-all duration-300 group-hover:bg-action/10">
-                    <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-primary transition-colors duration-300 group-hover:text-action" />
-                  </div>
-
-                  {/* Content */}
-                  <h3 className="text-base sm:text-lg md:text-xl font-semibold text-foreground mb-3">
-                    {item.title}
-                  </h3>
-                  <p className="text-sm sm:text-base text-muted-foreground leading-relaxed flex-grow">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
+const HowItWorks = () => (
+  <section id="jak-to-funguje" className="scroll-mt-24 bg-[#faf8f4] py-14 md:py-20">
+    <div className="container">
+      <p className="text-xs font-bold uppercase tracking-[0.16em] text-orange-800">Kde vám pomůže Čína Solo</p>
+      <div className="mt-3 flex flex-col justify-between gap-4 md:flex-row md:items-end">
+        <h2 className="max-w-xl text-3xl font-bold leading-tight tracking-tight sm:text-4xl">Příprava a překlad.<br />S jedním kontaktním místem.</h2>
+        <p className="max-w-sm text-sm leading-relaxed text-muted-foreground">Nemusíte sami koordinovat objednávku, platbu agentuře a dopravu. Tuto část vyřídíme za vás.</p>
       </div>
-    </section>
-  );
-};
-
+      <ol className="mt-9 grid gap-4 md:grid-cols-3">
+        {steps.map((item, index) => <li key={item.title} className="rounded-2xl border border-slate-200 bg-white p-6 md:p-7">
+          <div className="mb-6 flex items-center justify-between"><span className="flex h-10 w-10 items-center justify-center rounded-xl bg-orange-50 text-orange-800"><item.icon size={21} aria-hidden="true" /></span>
+            <span className="text-sm font-semibold text-slate-400">0{index + 1}</span></div>
+          <h3 className="text-lg font-bold leading-snug">{item.title}</h3><p className="mt-3 text-sm leading-relaxed text-muted-foreground">{item.text}</p>
+        </li>)}
+      </ol>
+      <div className="mt-6 flex items-start gap-3 rounded-xl bg-slate-900 p-5 text-sm leading-relaxed text-white">
+        <ArrowRight size={20} className="mt-0.5 shrink-0 text-orange-300" aria-hidden="true" />
+        <p><strong>Další krok je na vás:</strong> žádost podáte osobně čínskému úřadu. Vydání oprávnění, správní poplatky a půjčení auta nejsou součástí balíčku.</p>
+      </div>
+    </div>
+  </section>
+);
 export default HowItWorks;
