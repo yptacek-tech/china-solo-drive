@@ -121,12 +121,12 @@ const DrivingInShanghai = () => {
 
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 my-8">
                 <h3 className="text-lg font-semibold mb-2">
-                  Potřebujete překlad řidičského průkazu?
+                  Chcete pomoc s přípravou a překladem?
                 </h3>
                 <p className="mb-4">
-                  Zprostředkujeme objednávku překladu do čínštiny u partnerské
-                  agentury v Číně a jeho doručení. O případném řidičském
-                  oprávnění rozhoduje čínský úřad, nikoli Čína Solo.
+                  Dostanete průvodce a koordinaci objednávky, platby a doručení
+                  překladu od čínské agentury. Doklady jí posíláte přímo.
+                  O řidičském oprávnění rozhoduje příslušný úřad.
                 </p>
                 <Link to="/#balicek">
                   <Button>Zjistit více</Button>

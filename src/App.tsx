@@ -8,6 +8,7 @@ import Index from "./pages/Index";
 import CookieBanner from "./components/CookieBanner";
 import AnalyticsLoader from "./components/AnalyticsLoader";
 import ScrollToTop from "./components/ScrollToTop";
+import { CookieConsentProvider } from "@/hooks/useCookieConsent";
 
 // Lazy load non-critical pages
 const HowToDrive = lazy(() => import("./pages/HowToDrive"));
@@ -28,6 +29,7 @@ const PageLoader = () => (
 );
 
 const App = () => (
+  <CookieConsentProvider>
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -52,6 +54,7 @@ const App = () => (
       </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
+  </CookieConsentProvider>
 );
 
 export default App;

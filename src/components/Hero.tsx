@@ -28,8 +28,8 @@ const Hero = () => {
             style={{ willChange: "opacity, transform" }}
           >
             <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold text-primary-foreground leading-tight text-balance">
-              Překlad řidičského průkazu{" "}
-              <span className="text-action">do čínštiny.</span>
+              Připravte se na řízení{" "}
+              <span className="text-action">v Číně.</span>
             </h1>
           </motion.div>
 
@@ -40,13 +40,14 @@ const Hero = () => {
             style={{ willChange: "opacity, transform" }}
             className="mt-6 text-sm sm:text-base md:text-lg text-primary-foreground/85 max-w-2xl"
           >
-            Zprostředkujeme objednávku překladu u partnerské agentury v Číně
-            a jeho doručení do ČR nebo na adresu v Číně. Překlad vyhotovuje
-            agentura, my koordinujeme objednávku a dopravu.
+            Dostanete praktického průvodce a pomoc s objednávkou překladu.
+            Vy zaplatíte jednou, my uhradíme překlad čínské agentuře
+            a domluvíme jeho doručení. Skeny dokladů posíláte přímo agentuře.
           </motion.p>
           <p className="mt-4 max-w-2xl text-sm text-primary-foreground/85 leading-relaxed">
-            Jsme soukromý zprostředkovatel. Služba nezahrnuje podání žádosti ani
-            vydání řidičského oprávnění. Samotný překlad k řízení neopravňuje.
+            Čína Solo poskytuje know-how a koordinaci. Překlad vyhotovuje agentura;
+            žádost o řidičské oprávnění si vyřídíte u čínského úřadu.
+            Samotný překlad k řízení neopravňuje.
           </p>
 
           <motion.div
@@ -58,7 +59,7 @@ const Hero = () => {
           >
             <Button variant="hero" size="xl" asChild>
               <a href="#balicek" className="group">
-                Zobrazit překlad a cenu
+                Zobrazit balíček a cenu
                 <ArrowRight className="ml-2 group-hover:translate-x-1 transition-transform" />
               </a>
             </Button>

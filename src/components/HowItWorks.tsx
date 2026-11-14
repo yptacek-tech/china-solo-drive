@@ -5,23 +5,23 @@ const steps = [
   {
     icon: CreditCard,
     step: "1",
-    title: "Objednáte zprostředkování překladu",
+    title: "Jedna objednávka a platba",
     description:
-      "Seznámíte se s rozsahem služby a cenou, vyberete doručení a zaplatíte kartou. Platba je za překlad a zprostředkování, nikoli za řidičské oprávnění.",
+      "Vyberete doručení a zaplatíte balíček. Zahrnuje průvodce, koordinaci a náklady na překlad. Platbu agentuře a domluvu objednávky vyřídíme za vás.",
   },
   {
     icon: Mail,
     step: "2",
     title: "Agentura vyhotoví překlad",
     description:
-      "Potřebné podklady odešlete podle instrukcí přímo partnerské překladatelské agentuře v Číně. Ta překlad zpracuje; Čína Solo koordinuje objednávku a platbu.",
+      "Dostanete kontakt a instrukce. Skeny potřebných dokladů pošlete přímo agentuře, která překlad vyhotoví. Čína Solo jejich kopie nevyžaduje; řešíme stav objednávky.",
   },
   {
     icon: Plane,
     step: "3",
     title: "Překlad vám dorazí",
     description:
-      "Zprostředkujeme dopravu překladu na zvolenou adresu v ČR nebo v Číně. Případnou žádost o řidičské oprávnění podáváte sami u příslušného úřadu.",
+      "Koordinujeme doručení na vybranou adresu. S průvodcem se připravíte na osobní návštěvu úřadu, kde podáte vlastní žádost. O vydání oprávnění rozhoduje úřad.",
   },
 ];
 
@@ -40,7 +40,7 @@ const HowItWorks = () => {
             Jak to funguje?
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground">
-            Vy objednáte, čínská agentura přeloží, my koordinujeme doručení.
+            My řešíme komunikaci a platbu, agentura překládá, vy máte své doklady pod kontrolou.
           </p>
         </motion.div>
 

@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
+import { useCookieConsent } from "@/hooks/useCookieConsent";
 
 const Footer = () => {
+  const { openSettings } = useCookieConsent();
   return (
     <footer className="py-6 sm:py-8 md:py-10 bg-primary text-primary-foreground">
       <div className="container">
@@ -13,8 +15,8 @@ const Footer = () => {
           </div>
 
           <p className="max-w-sm text-center md:text-left text-xs sm:text-sm text-primary-foreground/80">
-            Soukromé zprostředkování překladu a doručení.
-            Nejsme státní úřad a nevydáváme řidičská oprávnění.
+            Know-how a koordinace překladu u čínské agentury.
+            Skeny dokladů zasíláte přímo agentuře.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 md:gap-6 text-xs sm:text-sm">
@@ -36,6 +38,9 @@ const Footer = () => {
             >
               Kontakt
             </Link>
+            <button type="button" onClick={openSettings} className="text-primary-foreground/80 hover:text-primary-foreground underline">
+              Nastavení cookies
+            </button>
           </div>
         </div>
       </div>

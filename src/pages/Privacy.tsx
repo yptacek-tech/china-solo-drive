@@ -1,157 +1,70 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
+import { useCookieConsent } from "@/hooks/useCookieConsent";
+import { Button } from "@/components/ui/button";
 
 const Privacy = () => {
+  const { openSettings } = useCookieConsent();
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      
-      <main className="pt-24 pb-20">
-        <div className="container max-w-4xl">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8 text-center">
-              Zásady ochrany osobních údajů
-            </h1>
-
-            <div className="prose prose-lg max-w-none text-muted-foreground">
-              <p className="lead text-foreground/80 mb-8">
-                Tento dokument vysvětluje, jak nakládáme s vašimi osobními údaji při používání služby Čína Solo (dostupné na www.cinasolo.cz). Zpracování údajů probíhá v souladu s Nařízením Evropského parlamentu a Rady (EU) 2016/679 (GDPR).
-              </p>
-
-              {/* Section 1 */}
-              <section className="mb-10">
-                <h2 className="text-xl font-bold text-foreground mb-4">1. Kdo je správcem Vašich údajů?</h2>
-                <p>
-                  Správcem osobních údajů (ten, kdo odpovídá za jejich ochranu) je:
-                </p>
-                <p className="mt-4">
-                  <strong className="text-foreground">Jan Ptáček</strong><br />
-                  IČO: 24398489<br />
-                  Sídlo: Nad Okrouhlíkem 2372/14, 182 00 Praha, Česká republika<br />
-                  E-mail: info@cinasolo.cz<br />
-                  (dále jen „Správce")
-                </p>
-              </section>
-
-              {/* Section 2 */}
-              <section className="mb-10">
-                <h2 className="text-xl font-bold text-foreground mb-4">2. Jaké údaje zpracováváme a co NEzpracováváme?</h2>
-                
-                <h3 className="text-lg font-semibold text-foreground mt-6 mb-3">A) Údaje, které zpracováváme (Běžné údaje)</h3>
-                <p>Abychom mohli vyřídit Vaši objednávku a doručit Vám zásilku, zpracováváme tyto údaje, které nám sami poskytnete:</p>
-                <ul className="list-disc list-outside ml-6 mt-2 space-y-1">
-                  <li>Jméno a příjmení</li>
-                  <li>Fakturační a doručovací adresa</li>
-                  <li>E-mailová adresa</li>
-                  <li>Telefonní číslo</li>
-                  <li>Platební údaje (pouze informace o tom, že platba proběhla; čísla karet nevidíme, zpracovává je Stripe)</li>
-                </ul>
-
-                <h3 className="text-lg font-semibold text-foreground mt-6 mb-3">B) Údaje, které NEzpracováváme (Citlivé doklady)</h3>
-                <p>
-                  <strong className="text-foreground">Důležité:</strong> Správce nevyžaduje, neukládá ani nemá přístup ke kopiím Vašich osobních dokladů (sken cestovního pasu, sken řidičského průkazu). Tyto dokumenty zasíláte na základě našich instrukcí přímo koncovému zpracovateli v Číně zabezpečenou cestou. Tím zajišťujeme maximální bezpečnost Vašich citlivých dat, která se vůbec nenacházejí na našich serverech.
-                </p>
-
-                <h3 className="text-lg font-semibold text-foreground mt-6 mb-3">C) Technické údaje (Cookies)</h3>
-                <p>
-                  Pokud nám udělíte souhlas na webu, sbíráme anonymizovaná data o návštěvnosti pomocí nástrojů Google Analytics 4 a Microsoft Clarity (např. typ zařízení, čas strávený na stránce, kliknutí).
-                </p>
-              </section>
-
-              {/* Section 3 */}
-              <section className="mb-10">
-                <h2 className="text-xl font-bold text-foreground mb-4">3. Proč údaje zpracováváme (Právní důvod)?</h2>
-                <ul className="list-disc list-outside ml-6 space-y-3">
-                  <li>
-                    <strong className="text-foreground">Plnění smlouvy:</strong> Vaše jméno, adresu a telefon potřebujeme, abychom zajistili vyhotovení překladu a doručení zásilky k Vám domů.
-                  </li>
-                  <li>
-                    <strong className="text-foreground">Plnění zákonných povinností:</strong> Faktury s Vašimi údaji musíme archivovat pro účely účetnictví a daní (vyžaduje to zákon o DPH).
-                  </li>
-                  <li>
-                    <strong className="text-foreground">Oprávněný zájem / Souhlas:</strong> Analytiku webu provádíme, abychom mohli zlepšovat naše služby.
-                  </li>
-                </ul>
-              </section>
-
-              {/* Section 4 */}
-              <section className="mb-10">
-                <h2 className="text-xl font-bold text-foreground mb-4">4. Komu údaje předáváme?</h2>
-                <p>
-                  Vaše data jsou u nás v bezpečí. Zpřístupňujeme je pouze těmto prověřeným partnerům nezbytným pro fungování služby:
-                </p>
-                <ul className="list-disc list-outside ml-6 mt-4 space-y-3">
-                  <li>
-                    <strong className="text-foreground">Stripe, Inc.:</strong> Provozovatel platební brány (bezpečné zpracování platby kartou).
-                  </li>
-                  <li>
-                    <strong className="text-foreground">Google Ireland Ltd. / Microsoft Corp.:</strong> Poskytovatelé analytických nástrojů (pouze anonymizovaná data).
-                  </li>
-                  <li>
-                    <strong className="text-foreground">Doručovací partneři a Zhotovitel (Čína):</strong> Vaše identifikační údaje (Jméno, Adresa, Telefon) musíme předat partnerské agentuře v Číně, aby mohla vypsat adresní štítek pro kurýra (SF Express / DHL) a zaslat Vám hotový dokument.
-                  </li>
-                </ul>
-              </section>
-
-              {/* Section 5 */}
-              <section className="mb-10">
-                <h2 className="text-xl font-bold text-foreground mb-4">5. Předávání dat mimo EU (Čína)</h2>
-                <p>
-                  Vzhledem k povaze služby (zajištění dokumentu z Číny) je nezbytné předat Vaše kontaktní údaje (nikoliv citlivé skeny, ty posíláte sami) do třetí země – Čínské lidové republiky. Čína nemá status země s odpovídající úrovní ochrany dat dle rozhodnutí Evropské komise. Předání Vašich kontaktních údajů do Číny je však nezbytné pro splnění smlouvy (doručení zásilky) ve smyslu čl. 49 odst. 1 písm. b) GDPR. Bez tohoto předání nelze službu poskytnout.
-                </p>
-              </section>
-
-              {/* Section 6 */}
-              <section className="mb-10">
-                <h2 className="text-xl font-bold text-foreground mb-4">6. Jak dlouho údaje uchováváme?</h2>
-                <ul className="list-disc list-outside ml-6 space-y-2">
-                  <li>
-                    <strong className="text-foreground">Účetní doklady (faktury):</strong> 10 let (dle zákona o DPH).
-                  </li>
-                  <li>
-                    <strong className="text-foreground">Údaje o objednávce:</strong> Do doby promlčení právních nároků (zpravidla 3 roky), poté jsou smazány.
-                  </li>
-                  <li>
-                    <strong className="text-foreground">Marketingová data (cookies):</strong> Dle nastavení Vašeho prohlížeče, maximálně 13 měsíců.
-                  </li>
-                </ul>
-              </section>
-
-              {/* Section 7 */}
-              <section className="mb-10">
-                <h2 className="text-xl font-bold text-foreground mb-4">7. Jaká máte práva?</h2>
-                <p>Podle GDPR máte právo:</p>
-                <ul className="list-disc list-outside ml-6 mt-4 space-y-2">
-                  <li>Požadovat přístup ke svým osobním údajům.</li>
-                  <li>Požadovat opravu nepřesných údajů.</li>
-                  <li>Požadovat výmaz údajů (pokud neexistuje zákonný důvod pro jejich uchování, např. účetnictví).</li>
-                  <li>Vznést námitku proti zpracování.</li>
-                  <li>
-                    Podat stížnost u Úřadu pro ochranu osobních údajů (
-                    <a href="https://www.uoou.cz" target="_blank" rel="noopener noreferrer" className="text-primary hover:underline">
-                      www.uoou.cz
-                    </a>
-                    ), pokud máte pocit, že s Vašimi daty nenakládáme správně.
-                  </li>
-                </ul>
-              </section>
-
-              <p className="text-sm text-muted-foreground mt-12 pt-6 border-t border-border">
-                Tyto zásady jsou platné od 23. 1. 2026.
-              </p>
+      <main className="container max-w-3xl pt-28 pb-20">
+        <h1 className="text-3xl md:text-4xl font-bold mb-8">Soukromí a cookies</h1>
+        <div className="space-y-8 text-muted-foreground leading-relaxed">
+          <section className="rounded-xl border border-border bg-card p-6">
+            <h2 className="text-xl font-semibold text-foreground mb-3">Doklady jdou přímo agentuře</h2>
+            <p>Čína Solo nevyžaduje ani nearchivuje skeny pasu a řidičského průkazu. Pro překlad je zasíláte přímo agentuře v Číně na kontakt uvedený v instrukcích. Na info@cinasolo.cz je neposílejte. Před odesláním si ověřte příjemce a jeho informace o zpracování údajů.</p>
+            <p className="mt-3">Odlišné jsou kontaktní a objednávkové údaje: ty potřebujeme pro komunikaci, úhradu agentury a koordinaci dopravy. Tvrzení, že nezpracováváme vůbec žádné osobní údaje, by proto nebylo přesné.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3">Kdo za údaje odpovídá</h2>
+            <p>Provozovatel a koordinátor Čína Solo: Jan Ptáček, IČO 24398489, Nad Okrouhlíkem 2372/14, 182 00 Praha, Česká republika. Kontakt pro soukromí a objednávky: <a href="mailto:info@cinasolo.cz" className="underline">info@cinasolo.cz</a>.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3">Co zpracováváme a proč</h2>
+            <ul className="list-disc ml-5 space-y-3">
+              <li><strong className="text-foreground">Objednávka a komunikace:</strong> jméno, e-mail, telefon, fakturační a doručovací údaje, číslo objednávky, její stav a obsah běžné komunikace. Účelem je plnění smlouvy, vyřízení dotazů a koordinace s agenturou.</li>
+              <li><strong className="text-foreground">Platba:</strong> Stripe zpracovává platební kartu; Čína Solo má informace o objednávce a výsledku platby, nikoli celé číslo karty. Nezbytné účetní údaje uchováváme podle zákonných povinností.</li>
+              <li><strong className="text-foreground">Analytika a reklama:</strong> pouze při udělení odpovídajícího souhlasu se zapnou Google Analytics nebo Google Ads a Meta Pixel. Mohou zpracovávat online identifikátory, technické údaje zařízení a návštěvy stránek. Neoznačujeme je za automaticky anonymní data.</li>
+            </ul>
+          </section>
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3">Komu mohou údaje být předány</h2>
+            <p>Stripe pro platbu; partnerské agentuře v Číně a doručovacím partnerům pouze údaje potřebné ke koordinaci objednávky a doručení; při souhlasu také Googlu a společnosti Meta pro zvolené účely měření. Příslušné orgány mohou obdržet údaje, pokud to vyžaduje zákon.</p>
+            <p className="mt-3">Dokumenty zasíláte přímo zhotoviteli v Číně. Čína nemá obecné rozhodnutí EU o odpovídající ochraně údajů. Než podklady odešlete, vyžádejte si přesnou identitu agentury, způsob podání, dobu uchování a informace o zpracování a případném předání mimo EHP. Podrobnosti o partnerovi si můžete vyžádat i před objednávkou, bez zasílání dokladů.</p>
+            <p className="mt-3">Google, Meta a Stripe mohou zpracovávat údaje i mimo EHP podle podmínek svých služeb a použitelných mechanismů pro předávání údajů. Jejich zásady: <a className="underline" href="https://policies.google.com/privacy">Google</a>, <a className="underline" href="https://www.facebook.com/privacy/policy/">Meta</a>, <a className="underline" href="https://stripe.com/privacy">Stripe</a>.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3">Volitelné cookies jsou ve výchozím stavu vypnuté</h2>
+            <p>Analytiku a reklamní měření volíte samostatně. Odmítnutí nebrání používání webu ani objednávce. Starší souhlas z předchozí verze lišty nepřebíráme.</p>
+            <div className="mt-4 overflow-x-auto">
+              <table className="w-full text-left text-sm">
+                <caption className="sr-only">Přehled použitých úložišť a cookies</caption>
+                <thead><tr className="border-b border-border"><th className="p-2" scope="col">Nástroj</th><th className="p-2" scope="col">Účel</th><th className="p-2" scope="col">Volba / doba</th></tr></thead>
+                <tbody>
+                  <tr className="border-b border-border"><td className="p-2">cookie-consent-v2 (místní úložiště)</td><td className="p-2">Zapamatování nastavení</td><td className="p-2">Volba platí 180 dnů</td></tr>
+                  <tr className="border-b border-border"><td className="p-2">Google Analytics (_ga, _ga_*)</td><td className="p-2">Analýza návštěvnosti</td><td className="p-2">Analytický souhlas; obvykle až 2 roky</td></tr>
+                  <tr className="border-b border-border"><td className="p-2">Google Ads (_gcl_*)</td><td className="p-2">Reklamní měření</td><td className="p-2">Reklamní souhlas; podle typu, obvykle až 90 dnů</td></tr>
+                  <tr><td className="p-2">Meta Pixel (_fbp, _fbc)</td><td className="p-2">Reklamní měření a publika</td><td className="p-2">Reklamní souhlas; obvykle až 90 dnů</td></tr>
+                </tbody>
+              </table>
             </div>
-          </motion.div>
+            <p className="mt-3 text-sm">Doby cookies se mohou obnovovat při další návštěvě se souhlasem. Odvolání souhlasu zastaví další měření podle příslušné volby a odstraní dostupné měřicí cookies na této doméně; již předaná data se tím automaticky nevymažou.</p>
+            <Button variant="outline" className="mt-4" onClick={openSettings}>Změnit nastavení cookies</Button>
+          </section>
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3">Jak dlouho údaje uchováváme</h2>
+            <p>Údaje o objednávce a komunikaci uchováváme po dobu potřebnou k vyřízení a ochraně právních nároků, zpravidla 3 roky od vyřízení. Účetní dokumenty uchováváme po dobu vyžadovanou příslušnými předpisy. Skeny dokladů nejsou součástí našeho objednávkového úložiště.</p>
+          </section>
+          <section>
+            <h2 className="text-xl font-semibold text-foreground mb-3">Vaše práva</h2>
+            <p>Podle použitelných podmínek můžete žádat přístup, opravu, výmaz, omezení či přenos údajů a vznést námitku. Souhlas s měřením můžete odvolat v nastavení cookies. Pro další žádosti napište na info@cinasolo.cz; ověření totožnosti řešíme přiměřeně konkrétní žádosti. Stížnost můžete podat u <a className="underline" href="https://uoou.gov.cz/">Úřadu pro ochranu osobních údajů</a>.</p>
+          </section>
+          <p className="text-sm border-t border-border pt-4">Aktualizováno 14. listopadu 2026.</p>
         </div>
       </main>
-
       <Footer />
     </div>
   );
 };
-
 export default Privacy;

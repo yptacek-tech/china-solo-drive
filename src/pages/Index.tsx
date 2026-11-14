@@ -6,6 +6,7 @@ import PricingSection from "@/components/PricingSection";
 import FAQSection from "@/components/FAQSection";
 import Footer from "@/components/Footer";
 import SEO from "@/components/SEO";
+import SupportSection from "@/components/SupportSection";
 import { SERVICE_NAME, SERVICE_DESCRIPTION, SERVICE_PRICE_CZK, faqItems } from "@/lib/service";
 
 const serviceSchema = {
@@ -13,7 +14,7 @@ const serviceSchema = {
   "@type": "Service",
   name: SERVICE_NAME,
   description: SERVICE_DESCRIPTION,
-  serviceType: "Zprostředkování překladu",
+  serviceType: "Informační průvodce a koordinace překladu",
   provider: {
     "@type": "Person",
     name: "Jan Ptáček",
@@ -24,7 +25,7 @@ const serviceSchema = {
     "@type": "Offer",
     price: String(SERVICE_PRICE_CZK),
     priceCurrency: "CZK",
-    description: "Cena za překlad, zprostředkování a průvodce; doprava dle zvolené varianty.",
+    description: "Know-how, koordinace a náklady na překlad agenturou; doprava dle zvolené varianty.",
     url: "https://cinasolo.cz/#balicek",
   },
 };
@@ -43,7 +44,7 @@ const Index = () => {
   return (
     <div className="min-h-screen">
       <SEO
-        title="Zprostředkování překladu do čínštiny | Čína Solo"
+        title="Průvodce řízením v Číně a koordinace překladu | Čína Solo"
         description={SERVICE_DESCRIPTION}
         schema={[serviceSchema, faqSchema]}
       />
@@ -52,6 +53,7 @@ const Index = () => {
       <WarningSection />
       <HowItWorks />
       <PricingSection />
+      <SupportSection />
       <FAQSection />
       <Footer />
     </div>

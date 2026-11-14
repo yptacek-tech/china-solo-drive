@@ -6,10 +6,10 @@ import { SERVICE_PRICE_CZK } from "@/lib/service";
 import { Link } from "react-router-dom";
 
 const features = [
-  "Vyhotovení překladu partnerskou překladatelskou agenturou v Číně",
-  "Překlad evropské legislativy specifikující typy držených řidičských oprávnění",
-  "Průvodce řízením v Číně (administrativní proces, specifika řízení, jak na půjčení auta)",
-  "Koordinace objednávky, platby a dopravy překladu",
+  "Praktický průvodce a instrukce pro přípravu na cestu",
+  "Náklady na překlad průkazu a podkladů ke kategoriím oprávnění u čínské agentury",
+  "Komunikace s agenturou a úhrada její práce z vaší platby",
+  "Koordinace doručení do ČR nebo na adresu v Číně",
 ];
 
 const PricingSection = () => {
@@ -40,7 +40,7 @@ const PricingSection = () => {
             <div className="p-5 sm:p-6 md:p-8">
               {/* Header */}
               <h3 className="text-base sm:text-lg font-semibold text-foreground">
-                Zprostředkování překladu do čínštiny
+                Průvodce a koordinace překladu
               </h3>
 
               {/* Price */}
@@ -53,7 +53,7 @@ const PricingSection = () => {
                 </span>
               </div>
               <p className="mt-2 text-sm sm:text-base text-muted-foreground">
-                Cena zahrnuje překlad, zprostředkování a průvodce. Dopravu zvolíte při platbě.
+                Jedna platba za know-how, koordinaci a překlad agenturou. Dopravu zvolíte při platbě.
               </p>
 
               {/* Divider */}
@@ -89,10 +89,9 @@ const PricingSection = () => {
                 </table>
               </div>
               <p className="mt-6 text-sm text-muted-foreground leading-relaxed">
-                Překlad vyhotovuje čínská agentura. Čína Solo je soukromý
-                zprostředkovatel objednávky a doručení. Podání žádosti, vydání
+                Platbu za balíček přijímá Čína Solo a z ní hradí překlad agentuře.
+                Skeny dokladů posíláte přímo agentuře. Podání žádosti, vydání
                 řidičského oprávnění ani správní poplatky nejsou součástí ceny.
-                Přijetí překladu úřadem není zaručeno.
               </p>
               <p className="mt-4 text-sm text-muted-foreground">
                 Před objednávkou si přečtěte{" "}
@@ -108,7 +107,7 @@ const PricingSection = () => {
                 className="w-full mt-10"
                 asChild
               >
-                <a href={STRIPE_CHECKOUT_URL}>Objednat překlad</a>
+                <a href={STRIPE_CHECKOUT_URL}>Objednat balíček</a>
               </Button>
 
               {/* Trust */}

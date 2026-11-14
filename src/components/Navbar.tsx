@@ -75,7 +75,7 @@ const Navbar = () => {
               )
             ))}
             <Button variant="nav" size="default" asChild>
-              <a href={isHomePage ? "#balicek" : "/#balicek"}>Objednat překlad</a>
+              <a href={isHomePage ? "#balicek" : "/#balicek"}>Zobrazit balíček</a>
             </Button>
           </div>
 
@@ -124,7 +124,7 @@ const Navbar = () => {
               ))}
               <Button variant="action" size="lg" className="w-full" asChild>
                 <a href={isHomePage ? "#balicek" : "/#balicek"} onClick={() => setIsMobileMenuOpen(false)}>
-                  Objednat překlad
+                  Zobrazit balíček
                 </a>
               </Button>
             </div>
