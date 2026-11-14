@@ -14,7 +14,6 @@ import {
   BadgeCheck
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { STRIPE_CHECKOUT_URL } from "@/lib/stripe";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
@@ -43,7 +42,7 @@ const HowToDrive = () => {
               Řízení motorových vozidel v Číně
             </h1>
             <p className="text-lg md:text-xl text-primary-foreground/80">
-              Komplexní přehled legislativních požadavků pro české státní příslušníky
+              Orientační průvodce pro české cestovatele. Aktuální požadavky si ověřte u příslušného úřadu.
             </p>
           </motion.div>
         </div>
@@ -238,9 +237,9 @@ const HowToDrive = () => {
                   <div className="flex items-start gap-4 p-4 bg-action/10 border border-action/20 rounded-xl">
                     <FileText className="w-6 h-6 text-action flex-shrink-0 mt-1" />
                     <div>
-                      <h4 className="font-semibold text-foreground">Úřední překlad řidičského průkazu</h4>
+                      <h4 className="font-semibold text-foreground">Překlad řidičského průkazu do čínštiny</h4>
                       <p className="text-muted-foreground text-sm">
-                        Překlad do čínského jazyka vyhotovený certifikovanou čínskou překladatelskou agenturou — <strong>zajišťujeme v rámci našich služeb</strong>
+                        Překlad do čínštiny vyhotovuje partnerská agentura v Číně. Čína Solo zprostředkovává objednávku a doručení. Požadavky na zhotovitele a podobu překladu si předem ověřte u úřadu, kde budete žádat.
                       </p>
                     </div>
                   </div>
@@ -374,15 +373,16 @@ const HowToDrive = () => {
               className="text-center bg-gradient-to-br from-primary to-primary/80 rounded-2xl p-8 md:p-12"
             >
               <h2 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4">
-                Potřebujete zajistit úřední překlad?
+                Potřebujete překlad do čínštiny?
               </h2>
               <p className="text-primary-foreground/80 mb-8 max-w-lg mx-auto">
-                Zajistíme vyhotovení certifikovaného překladu prostřednictvím čínské překladatelské 
-                agentury včetně doručení na adresu v České republice.
+                Zprostředkujeme objednávku u partnerské překladatelské agentury v Číně
+                a doručení překladu. Služba nezahrnuje podání žádosti ani vydání
+                řidičského oprávnění. Přijetí překladu úřadem není zaručeno.
               </p>
               <Button variant="hero" size="xl" asChild>
-                <a href={STRIPE_CHECKOUT_URL}>
-                  Objednat službu — 1 399 Kč
+                <a href="/#balicek">
+                  Zobrazit rozsah služby a cenu
                 </a>
               </Button>
             </motion.div>

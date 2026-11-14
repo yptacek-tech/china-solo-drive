@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { STRIPE_CHECKOUT_URL } from "@/lib/stripe";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -76,7 +75,7 @@ const Navbar = () => {
               )
             ))}
             <Button variant="nav" size="default" asChild>
-              <a href={STRIPE_CHECKOUT_URL}>Objednat překlad</a>
+              <a href={isHomePage ? "#balicek" : "/#balicek"}>Objednat překlad</a>
             </Button>
           </div>
 
@@ -124,7 +123,7 @@ const Navbar = () => {
                 )
               ))}
               <Button variant="action" size="lg" className="w-full" asChild>
-                <a href={STRIPE_CHECKOUT_URL} onClick={() => setIsMobileMenuOpen(false)}>
+                <a href={isHomePage ? "#balicek" : "/#balicek"} onClick={() => setIsMobileMenuOpen(false)}>
                   Objednat překlad
                 </a>
               </Button>

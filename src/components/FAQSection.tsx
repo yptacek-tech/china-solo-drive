@@ -1,73 +1,11 @@
 import { motion } from "framer-motion";
+import { faqItems } from "@/lib/service";
 import {
   Accordion,
   AccordionContent,
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-
-const faqItems = [
-  {
-    question: "Jak dlouho trvá doručení?",
-    answer:
-      "Vyhotovení úředního překladu: 1–2 pracovní dny od odeslání skenů. Expresní doručení do ČR: do 10 kalendářních dnů (letecky). Doprava v rámci Číny: do 6 dnů. Tyto časy již zahrnují i dobu potřebnou pro samotný překlad. Celkem doporučujeme objednávat alespoň 3 týdny před odletem, abyste měli jistotu, že vše stihne dorazit i v případě zdržení například na celnici.",
-  },
-  {
-    question: "Jaké jsou možnosti doručení?",
-    answer:
-      "Nabízíme tři možnosti: 1) Doručení po Číně (do 6 dnů) – zdarma, s možností doručení přímo do vašeho hotelu. 2) Standardní doručení do ČR (do 18 dnů) – 1 190 Kč. 3) Expresní doručení do ČR (do 10 dnů) – 1 780 Kč. Všechny uvedené ceny jsou skutečné náklady dopravce bez jakékoliv přirážky – na doručení nic nevyděláváme.",
-  },
-  {
-    question: "Stačí mi v Číně mezinárodní řidičský průkaz (IDP)?",
-    answer:
-      "Bohužel ne. Čínská lidová republika nepodepsala Vídeňskou ani Ženevskou úmluvu o silničním provozu, a proto neuznává mezinárodní řidičské průkazy vydané v ČR (ani jinde v EU). Bez místního ‚Dočasného povolení k řízení' (Temporary Driving Permit) není možné si pronajmout automobil a řízení je nelegální.",
-  },
-  {
-    question: "Je tento postup legální a spolehlivý?",
-    answer:
-      "Ano. Získáte úředně ověřený překlad od certifikované čínské agentury, který je nezbytným podkladem pro čínskou dopravní policii. Na základě tohoto dokumentu vám po příletu dopravní policie na letišti (nebo na úřadě) vystaví oficiální povolení k řízení.",
-  },
-  {
-    question: "Jak nakládáte se skeny mých dokladů?",
-    answer:
-      "Skeny vašeho řidičáku neposíláte nám, ale přímo prověřené partnerské agentuře v Číně. My jako zprostředkovatel s vašimi citlivými údaji nepřicházíme do styku, pouze zajišťujeme celý proces a platbu.",
-  },
-  {
-    question: "Na jak dlouho povolení platí?",
-    answer:
-      "Dočasné povolení k řízení se zpravidla vydává na dobu platnosti vašeho víza, maximálně však na 90 dnů. Je ideální pro turistické cesty nebo krátkodobé pobyty.",
-  },
-  {
-    question: "Co když mi povolení na místě nevydají?",
-    answer:
-      "I když dodáte perfektní podklady, finální rozhodnutí a vydání dočasného průkazu je vždy v pravomoci konkrétního úředníka čínské dopravní policie. Z naší zkušenosti je při dodržení všech instrukcí (které od nás dostanete v manuálu) úspěšnost velmi vysoká, ale nelze ji 100% garantovat kvůli vyšší moci nebo změně úředních postupů.",
-  },
-  {
-    question: "Kolik stojí vydání samotného průkazu v Číně?",
-    answer:
-      "Poplatek, který zaplatíte přímo na přepážce čínské dopravní policii, je pouze symbolický – zpravidla 10 RMB (cca 30–35 Kč). Tento správní poplatek není součástí naší služby (hradí se na místě přes Alipay/WeChat nebo v hotovosti) a pokrývá tisk samotné kartičky.",
-  },
-  {
-    question: "Musím v Číně podstoupit zdravotní prohlídku?",
-    answer:
-      "Ne, na získání dočasného řidičského oprávnění v Číně není potřeba žádná zdravotní prohlídka.",
-  },
-  {
-    question: "Domluvím se na úřadě anglicky?",
-    answer:
-      "Upřímně? Spíše ne. Většina úředníků mluví pouze čínsky, ale na turistických místech už úředníci vědí, co od nich jako cizinec budete chtít, není se tedy potřeba jazykové bariéry obávat. Navíc od nás dostanete základní potřebné fráze napsané v čínštině, ty pak stačí pouze ukázat úředníkovi. Díky tomu proces proběhne hladce i bez znalosti jediného slova čínsky.",
-  },
-  {
-    question: "Co musím mít fyzicky s sebou na úřadě?",
-    answer:
-      "Překlad českého řidičského průkazu do čínštiny od certifikované agentury, váš platný český řidičský průkaz (bez originálů vám úředník průkaz nevydá), váš cestovní pas s platným vízem/vstupním razítkem a 3 pasové fotografie s bílým pozadím (ne starší než 6 měsíců). Poznámka: Nejsou uznávány řidičské průkazy mladistvých ve zkušební periodě, kdy smí řídit pouze pod dohledem mentora.",
-  },
-  {
-    question: "Jak dlouho strávím na úřadě?",
-    answer:
-      "Samotný proces u přepážky trvá obvykle 30 až 60 minut. Průkaz vám vytisknou a zalaminují na počkání.",
-  },
-];
 
 const FAQSection = () => {
   return (

@@ -28,13 +28,13 @@ const Terms = () => {
                     <strong className="text-foreground">Poskytovatel:</strong> Jan Ptáček, IČO: 24398489, Sídlo: Nad Okrouhlíkem 2372/14, 182 00 Praha, Česká republika, E-mail: info@cinasolo.cz (dále jen „Poskytovatel")
                   </li>
                   <li>
-                    <strong className="text-foreground">Služba:</strong> Poskytovatel provozuje webové rozhraní na adrese www.cinasolo.cz (dále jen „Web"), jehož prostřednictvím nabízí službu zprostředkování úředního překladu řidičského průkazu v Čínské lidové republice a prodej digitálních informačních materiálů (dále jen „Služba").
+                    <strong className="text-foreground">Služba:</strong> Poskytovatel provozuje webové rozhraní na adrese www.cinasolo.cz (dále jen „Web"), jehož prostřednictvím nabízí službu zprostředkování překladu řidičského průkazu do čínštiny v Čínské lidové republice a prodej digitálních informačních materiálů (dále jen „Služba").
                   </li>
                   <li>
                     <strong className="text-foreground">Klient:</strong> Fyzická nebo právnická osoba, která si objedná Službu prostřednictvím Webu (dále jen „Klient").
                   </li>
                   <li>
-                    <strong className="text-foreground">Charakter Služby:</strong> Klient bere na vědomí, že Poskytovatel není orgánem veřejné moci ani vydavatelem řidičských oprávnění. Služba spočívá v administrativní asistenci, poskytnutí know-how a úhradě poplatků zahraničnímu partnerovi. Poskytovatel negarantuje výsledek správního řízení před čínskými úřady.
+                    <strong className="text-foreground">Charakter Služby:</strong> Klient bere na vědomí, že Poskytovatel není orgánem veřejné moci ani vydavatelem řidičských oprávnění. Služba spočívá ve zprostředkování objednávky překladu u partnerské agentury v Číně, koordinaci platby a dopravy a poskytnutí informačního průvodce. Překlad vyhotovuje zahraniční partner. Podání žádosti o řidičské oprávnění, zastupování před úřady ani vydání oprávnění nejsou součástí Služby. Samotný překlad k řízení neopravňuje a jeho přijetí příslušným úřadem není zaručeno.
                   </li>
                 </ol>
               </section>
@@ -47,7 +47,7 @@ const Terms = () => {
                     Předmětem smlouvy je závazek Poskytovatele:
                     <ol className="list-[lower-alpha] list-outside ml-6 mt-2 space-y-2">
                       <li>Poskytnout Klientovi digitální průvodce (PDF e-book) s instrukcemi pro řízení v Číně.</li>
-                      <li>Zajistit u partnerské agentury v Číně (dále jen „Zhotovitel") rezervaci kapacity pro vyhotovení úředního překladu.</li>
+                      <li>Zajistit u partnerské agentury v Číně (dále jen „Zhotovitel") rezervaci kapacity pro vyhotovení překladu do čínštiny.</li>
                       <li>Poskytnout Klientovi instrukce a přímý kontakt na Zhotovitele pro bezpečné zaslání podkladů.</li>
                       <li>Uhradit Zhotoviteli náklady na překlad a mezinárodní dopravu (DHL/SF Express) na adresu Klienta.</li>
                     </ol>
@@ -71,9 +71,9 @@ const Terms = () => {
               <section className="mb-10">
                 <h2 className="text-xl font-bold text-foreground mb-4">IV. Cena služby a platební podmínky</h2>
                 <ol className="list-decimal list-outside ml-6 space-y-4 text-muted-foreground">
-                  <li>Cena služby je uvedena na Webu jako konečná. Poskytovatel není plátcem DPH.</li>
+                  <li>Cena za překlad a zprostředkování je uvedena na Webu. Cena dopravy závisí na zvolené variantě; celková částka je zobrazena před zaplacením. Poskytovatel není plátcem DPH.</li>
                   <li>Cenu hradí Klient bezhotovostně prostřednictvím platební brány (Stripe) ihned po odeslání objednávky.</li>
-                  <li>Cena zahrnuje: licenci k digitálnímu obsahu, zprostředkovatelský poplatek, poplatek za překlad v Číně a mezinárodní poštovné do ČR.</li>
+                  <li>Cena 1 399 Kč zahrnuje informačního průvodce, zprostředkovatelský poplatek a vyhotovení překladu v Číně. Doručení po Číně je zdarma, standardní doručení do ČR stojí 1 190 Kč a expresní doručení do ČR 1 780 Kč. Správní poplatky za případnou žádost o řidičské oprávnění nejsou zahrnuty; Klient je hradí přímo příslušnému úřadu.</li>
                 </ol>
               </section>
 
@@ -89,7 +89,7 @@ const Terms = () => {
                     </ul>
                   </li>
                   <li>
-                    <strong className="text-foreground">Lhůty:</strong> Zhotovitel obvykle vyhotoví překlad do 3 pracovních dnů od obdržení podkladů od Klienta. Následná doprava do ČR trvá zpravidla 5–10 pracovních dnů. Poskytovatel nenese odpovědnost za zpoždění způsobené celním řízením nebo dopravcem.
+                    <strong className="text-foreground">Lhůty:</strong> Zhotovitel obvykle vyhotoví překlad do 1–3 pracovních dnů od obdržení úplných podkladů. Orientační celkové lhůty včetně překladu jsou do 6 dnů při doručení po Číně, do 18 dnů při standardním doručení do ČR a do 10 dnů při expresním doručení do ČR. Jde o odhady, nikoli zaručené lhůty; dopravu může prodloužit dopravce nebo celní řízení.
                   </li>
                   <li>
                     <strong className="text-foreground">Nesplnění součinnosti:</strong> Pokud Klient nezašle podklady Zhotoviteli ani do 30 dnů od objednávky, považuje se Služba za splněnou v rozsahu rezervace kapacity a administrativy, a Klientovi nevzniká nárok na vrácení peněz.

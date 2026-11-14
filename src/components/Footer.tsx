@@ -8,9 +8,14 @@ const Footer = () => {
           <div className="text-center md:text-left">
             <p className="font-semibold text-base sm:text-lg">Čína Solo</p>
             <p className="text-xs sm:text-sm text-primary-foreground/70 mt-1">
-              © 2026 Čína Solo. Vaše brána k roadtripům v Asii.
+              © 2026 Čína Solo · Jan Ptáček · IČO 24398489
             </p>
           </div>
+
+          <p className="max-w-sm text-center md:text-left text-xs sm:text-sm text-primary-foreground/80">
+            Soukromé zprostředkování překladu a doručení.
+            Nejsme státní úřad a nevydáváme řidičská oprávnění.
+          </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 md:gap-6 text-xs sm:text-sm">
             <Link

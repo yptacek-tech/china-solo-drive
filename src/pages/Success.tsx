@@ -50,7 +50,7 @@ const Success = () => {
             </h1>
             
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-              Budeme Vás brzy kontaktovat ohledně zaslání skenu Vašeho řidičského průkazu.
+              Budeme Vás kontaktovat s instrukcemi k objednávce překladu a k odeslání podkladů přímo partnerské agentuře v Číně.
             </p>
 
             {/* Next Steps Card */}
@@ -66,10 +66,15 @@ const Success = () => {
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex items-center justify-center w-6 h-6 rounded-full bg-action/20 text-action text-sm font-bold shrink-0">2</span>
-                  <span>Odešlete sken řidičáku na uvedenou adresu.</span>
+                  <span>Potřebné podklady odešlete přímo agentuře na adresu v instrukcích, nikoli na kontaktní e-mail Čína Solo.</span>
                 </li>
               </ol>
             </div>
+
+            <p className="mb-8 text-sm text-muted-foreground">
+              Objednávka se týká překladu a zprostředkování. Nejde o žádost
+              o řidičské oprávnění ani o potvrzení jeho vydání.
+            </p>
 
             {/* Back Button */}
             <Button variant="outline" asChild>

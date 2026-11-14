@@ -64,9 +64,9 @@ const DrivingInShanghai = () => {
                 Před pronájmem auta v Šanghaji je nezbytné mít platné dočasné
                 řidičské oprávnění pro Čínu. Mezinárodní řidičský průkaz zde
                 bohužel neplatí – Čína nepodepsala příslušné mezinárodní
-                úmluvy. Nejprve si tedy zajistěte úředně ověřený překlad vašeho
-                českého řidičáku, který vám umožní získat čínské dočasné
-                povolení.
+                úmluvy. Požadavky na překlad svého řidičského průkazu a další podklady si
+                ověřte u příslušného čínského úřadu. Samotný překlad není
+                povolením k řízení a nezaručuje jeho vydání.
               </p>
 
               <h2>Kde si pronajmout auto</h2>
@@ -121,11 +121,12 @@ const DrivingInShanghai = () => {
 
               <div className="bg-primary/10 border border-primary/20 rounded-lg p-6 my-8">
                 <h3 className="text-lg font-semibold mb-2">
-                  Potřebujete řidičské oprávnění pro Čínu?
+                  Potřebujete překlad řidičského průkazu?
                 </h3>
                 <p className="mb-4">
-                  Zajistíme vám úředně ověřený překlad řidičského průkazu, se
-                  kterým získáte dočasné povolení k řízení v Číně.
+                  Zprostředkujeme objednávku překladu do čínštiny u partnerské
+                  agentury v Číně a jeho doručení. O případném řidičském
+                  oprávnění rozhoduje čínský úřad, nikoli Čína Solo.
                 </p>
                 <Link to="/#balicek">
                   <Button>Zjistit více</Button>
