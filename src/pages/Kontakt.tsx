@@ -24,7 +24,7 @@ const Kontakt = () => {
             
             {/* Subheadline */}
             <p className="text-lg text-muted-foreground mb-12">
-              Potřebujete poradit s řidičským oprávněním? Napište nám.
+              Máte dotaz k balíčku, agentuře nebo doručení? Napište nám. Skeny dokladů k dotazu nepřikládejte.
             </p>
 
             {/* Primary Action - Email Card */}
@@ -74,7 +74,7 @@ const Kontakt = () => {
               className="pt-8 border-t border-border"
             >
               <div className="text-xs md:text-sm text-muted-foreground space-y-1">
-                <p>Provozovatel: Jan Ptáček</p>
+                <p>Provozovatel a koordinátor Čína Solo: Jan Ptáček</p>
                 <p>IČO: 24398489</p>
                 <p>Sídlo: Nad Okrouhlíkem 2372/14, 182 00 Praha, Česká republika</p>
               </div>

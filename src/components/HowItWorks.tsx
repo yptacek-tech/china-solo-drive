@@ -5,23 +5,23 @@ const steps = [
   {
     icon: CreditCard,
     step: "1",
-    title: "Objednání na 2 kliknutí",
+    title: "Jedna objednávka a platba",
     description:
-      "Vyberete doručení, zaplatíte kartou. Žádné zbytečné papírování.",
+      "Vyberete doručení a zaplatíte balíček. Zahrnuje průvodce, koordinaci a náklady na překlad. Platbu agentuře a domluvu objednávky vyřídíme za vás.",
   },
   {
     icon: Mail,
     step: "2",
-    title: "Odešlete sken řidičského průkazu",
+    title: "Agentura vyhotoví překlad",
     description:
-      "Sken řidičáku zašlete přímo naší partnerské agentuře v Číně, my se postaráme o zbytek. Vaše data neukládáme.",
+      "Dostanete kontakt a instrukce. Skeny potřebných dokladů pošlete přímo agentuře, která překlad vyhotoví. Čína Solo jejich kopie nevyžaduje; řešíme stav objednávky.",
   },
   {
     icon: Plane,
     step: "3",
-    title: "Expresní doručení",
+    title: "Překlad vám dorazí",
     description:
-      'Doručíme do ČR nebo na vybranou adresu v Číně (třeba do Vašeho hotelu). Doručení po Číně trvá do 6 dnů, do ČR expresně do 10 dnů.',
+      "Koordinujeme doručení na vybranou adresu. S průvodcem se připravíte na osobní návštěvu úřadu, kde podáte vlastní žádost. O vydání oprávnění rozhoduje úřad.",
   },
 ];
 
@@ -40,7 +40,7 @@ const HowItWorks = () => {
             Jak to funguje?
           </h2>
           <p className="mt-4 text-base sm:text-lg text-muted-foreground">
-            Bezpečně a jednoduše. Ve třech krocích.
+            My řešíme komunikaci a platbu, agentura překládá, vy máte své doklady pod kontrolou.
           </p>
         </motion.div>
 

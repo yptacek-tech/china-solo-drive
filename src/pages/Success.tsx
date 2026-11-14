@@ -1,5 +1,4 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { CheckCircle, ArrowLeft, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -7,19 +6,6 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
 const Success = () => {
-  useEffect(() => {
-    // Fire Google Ads conversion event
-    // This does not require cookie consent
-    if (window.gtag) {
-      window.gtag('event', 'conversion', {
-        'send_to': 'AW-18281639357/R1y_CMu3isccEL3bro1E',
-        'value': 1.0,
-        'currency': 'EUR',
-        'transaction_id': ''
-      });
-    }
-  }, []);
-
   return (
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
@@ -46,11 +32,11 @@ const Success = () => {
 
             {/* Headline */}
             <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-8">
-              Děkujeme za Vaši objednávku.
+              Další kroky k vaší objednávce
             </h1>
             
             <p className="text-lg text-muted-foreground mb-12 leading-relaxed">
-              Budeme Vás brzy kontaktovat ohledně zaslání skenu Vašeho řidičského průkazu.
+              Po potvrzení platby vám pošleme průvodce a instrukce k přímému kontaktu s agenturou. Samotné zobrazení této stránky nepotvrzuje úhradu.
             </p>
 
             {/* Next Steps Card */}
@@ -62,14 +48,19 @@ const Success = () => {
               <ol className="space-y-3 text-muted-foreground">
                 <li className="flex items-start gap-3">
                   <span className="flex items-center justify-center w-6 h-6 rounded-full bg-action/20 text-action text-sm font-bold shrink-0">1</span>
-                  <span>Zkontrolujte svůj e-mail pro instrukce k odeslání skenu řidičského průkazu.</span>
+                  <span>Vyčkejte na potvrzení platby a instrukce e-mailem. Pokud potvrzení nedorazí, napište na info@cinasolo.cz bez příloh s doklady.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="flex items-center justify-center w-6 h-6 rounded-full bg-action/20 text-action text-sm font-bold shrink-0">2</span>
-                  <span>Odešlete sken řidičáku na uvedenou adresu.</span>
+                  <span>Potřebné podklady odešlete přímo agentuře na adresu v instrukcích, nikoli na kontaktní e-mail Čína Solo.</span>
                 </li>
               </ol>
             </div>
+
+            <p className="mb-8 text-sm text-muted-foreground">
+              Objednávka se týká překladu a zprostředkování. Nejde o žádost
+              o řidičské oprávnění ani o potvrzení jeho vydání.
+            </p>
 
             {/* Back Button */}
             <Button variant="outline" asChild>
@@ -86,13 +77,5 @@ const Success = () => {
     </div>
   );
 };
-
-// Type declaration for window
-declare global {
-  interface Window {
-    dataLayer: unknown[];
-    gtag?: (...args: unknown[]) => void;
-  }
-}
 
 export default Success;

@@ -1,29 +1,19 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
-
-const GA_MEASUREMENT_ID = "G-G0TRYRJ6J5";
+import { useCookieConsent } from "@/hooks/useCookieConsent";
+import { applyTrackingConsent, trackPage } from "@/lib/tracking";
 
 const AnalyticsLoader = () => {
-  const location = useLocation();
-
+  const { pathname } = useLocation();
+  const { preferences } = useCookieConsent();
+  const { analytics, marketing } = preferences;
+  const isPaymentReturn = pathname === "/success";
   useEffect(() => {
-    // Track SPA page changes after initial load
-    // The initial page view is already tracked by the inline tag in index.html
-    if (typeof window !== "undefined" && window.gtag) {
-      window.gtag("config", GA_MEASUREMENT_ID, {
-        page_path: location.pathname,
-      });
-    }
-  }, [location.pathname]);
-
+    applyTrackingConsent({ analytics: analytics && !isPaymentReturn, marketing: marketing && !isPaymentReturn });
+  }, [analytics, marketing, isPaymentReturn]);
+  useEffect(() => {
+    trackPage(pathname, { analytics, marketing });
+  }, [pathname, analytics, marketing]);
   return null;
 };
-
-declare global {
-  interface Window {
-    dataLayer?: unknown[][];
-    gtag?: (...args: unknown[]) => void;
-  }
-}
-
 export default AnalyticsLoader;

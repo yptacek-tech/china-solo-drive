@@ -16,9 +16,9 @@ const WarningSection = () => {
             <AlertTriangle className="w-5 h-5 sm:w-6 sm:h-6 text-warning-foreground" />
           </div>
           <p className="text-warning-foreground font-medium text-sm sm:text-base md:text-lg">
-            <span className="font-bold">Pozor:</span> V Číně vám půjčovny auto
-            bez místního řidičského průkazu nevydají. Policie neuznává
-            mezinárodní řidičské průkazy (IDP).
+            <span className="font-bold">Překlad není povolení k řízení.</span>{" "}
+            O přijetí překladu a vydání oprávnění rozhoduje příslušný čínský úřad.
+            Před objednávkou si u něj ověřte aktuální požadavky.
           </p>
         </motion.div>
       </div>
